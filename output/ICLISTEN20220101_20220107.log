@@ -1,0 +1,55 @@
+2026-02-24T18:54:20.505695-0800 INFO IcListenMetadataGenerator 20220101 Generating metadata for 2022-01-01 00:00:00 to 2022-01-07 00:00:00...
+2026-02-24T18:54:20.506153-0800 INFO IcListenMetadataGenerator 20220101 Searching in s3://pacific-sound-256khz/ for wav or flac files that match the search patterns MARS* ...
+2026-02-24T18:54:20.562178-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2021 prefixes: ['MARS']
+2026-02-24T18:54:20.691543-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2021
+2026-02-24T18:54:20.691768-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:20.806329-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:20.806541-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:20.842247-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:20.842445-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:20.877424-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:20.877595-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:20.912707-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:20.912876-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:20.947052-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:20.947242-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:20.980949-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:20.981185-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.017301-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.017537-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.051288-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.051490-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.085019-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.085209-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.117476-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.117649-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.150173-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.150368-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.182607-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.182772-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.217194-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.217398-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.252402-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.252730-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.288318-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.288632-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.320916-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.321170-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.355251-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.355466-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.389172-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.389392-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.423727-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.423900-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.459118-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.459284-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.493567-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.493743-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.530367-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.530607-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.565846-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.566123-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.599620-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.599871-0800 INFO IcListenMetadataGenerator 20220101 Searching in bucket: pacific-sound-256khz-2022 prefixes: ['MARS']
+2026-02-24T18:54:21.634541-0800 INFO IcListenMetadataGenerator 20220101  No data found in pacific-sound-256khz-2022
+2026-02-24T18:54:21.634731-0800 INFO IcListenMetadataGenerator 20220101  No files found to process that cover the period 2021-12-31 23:00:00 - 2022-01-02 00:00:00

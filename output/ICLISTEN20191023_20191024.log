@@ -1,0 +1,358 @@
+2026-02-25T15:07:35.239698-0800 INFO IcListenMetadataGenerator 20191023 Generating metadata for 2019-10-23 00:00:00 to 2019-10-24 00:00:00...
+2026-02-25T15:07:35.240212-0800 INFO IcListenMetadataGenerator 20191023 Searching in s3://pacific-sound-256khz/ for wav or flac files that match the search patterns MARS_* ...
+2026-02-25T15:07:35.305828-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:35.463222-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191022_230758.wav with timestamp 2019-10-22 23:07:58
+2026-02-25T15:07:40.925502-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191022_231758.wav with timestamp 2019-10-22 23:17:58
+2026-02-25T15:07:41.198996-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191022_232758.wav with timestamp 2019-10-22 23:27:58
+2026-02-25T15:07:41.570345-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191022_233758.wav with timestamp 2019-10-22 23:37:58
+2026-02-25T15:07:41.894260-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191022_234758.wav with timestamp 2019-10-22 23:47:58
+2026-02-25T15:07:42.304198-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191022_235758.wav with timestamp 2019-10-22 23:57:58
+2026-02-25T15:07:42.631725-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:42.770839-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_000758.wav with timestamp 2019-10-23 00:07:58
+2026-02-25T15:07:43.108911-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_001758.wav with timestamp 2019-10-23 00:17:58
+2026-02-25T15:07:43.394615-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_002758.wav with timestamp 2019-10-23 00:27:58
+2026-02-25T15:07:43.846702-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_003758.wav with timestamp 2019-10-23 00:37:58
+2026-02-25T15:07:44.141318-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_004758.wav with timestamp 2019-10-23 00:47:58
+2026-02-25T15:07:44.481874-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_005758.wav with timestamp 2019-10-23 00:57:58
+2026-02-25T15:07:44.846245-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:44.885885-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_010758.wav with timestamp 2019-10-23 01:07:58
+2026-02-25T15:07:45.302768-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_011758.wav with timestamp 2019-10-23 01:17:58
+2026-02-25T15:07:45.659460-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_012758.wav with timestamp 2019-10-23 01:27:58
+2026-02-25T15:07:46.029870-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_013758.wav with timestamp 2019-10-23 01:37:58
+2026-02-25T15:07:46.387452-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_014758.wav with timestamp 2019-10-23 01:47:58
+2026-02-25T15:07:46.772023-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_015758.wav with timestamp 2019-10-23 01:57:58
+2026-02-25T15:07:47.198667-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:47.239922-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_020758.wav with timestamp 2019-10-23 02:07:58
+2026-02-25T15:07:47.654093-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_021758.wav with timestamp 2019-10-23 02:17:58
+2026-02-25T15:07:47.967395-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_022758.wav with timestamp 2019-10-23 02:27:58
+2026-02-25T15:07:48.303531-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_023758.wav with timestamp 2019-10-23 02:37:58
+2026-02-25T15:07:48.815055-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_024758.wav with timestamp 2019-10-23 02:47:58
+2026-02-25T15:07:49.255632-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_025758.wav with timestamp 2019-10-23 02:57:58
+2026-02-25T15:07:49.687817-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:49.731142-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_030758.wav with timestamp 2019-10-23 03:07:58
+2026-02-25T15:07:50.021980-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_031758.wav with timestamp 2019-10-23 03:17:58
+2026-02-25T15:07:50.358024-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_032758.wav with timestamp 2019-10-23 03:27:58
+2026-02-25T15:07:50.676539-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_033758.wav with timestamp 2019-10-23 03:37:58
+2026-02-25T15:07:51.103214-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_034758.wav with timestamp 2019-10-23 03:47:58
+2026-02-25T15:07:51.443354-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_035758.wav with timestamp 2019-10-23 03:57:58
+2026-02-25T15:07:51.797772-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:51.840560-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_040758.wav with timestamp 2019-10-23 04:07:58
+2026-02-25T15:07:52.251509-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_041758.wav with timestamp 2019-10-23 04:17:58
+2026-02-25T15:07:52.555378-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_042758.wav with timestamp 2019-10-23 04:27:58
+2026-02-25T15:07:52.907586-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_043758.wav with timestamp 2019-10-23 04:37:58
+2026-02-25T15:07:53.274205-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_044758.wav with timestamp 2019-10-23 04:47:58
+2026-02-25T15:07:53.613299-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_045758.wav with timestamp 2019-10-23 04:57:58
+2026-02-25T15:07:53.902676-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:53.944066-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_050758.wav with timestamp 2019-10-23 05:07:58
+2026-02-25T15:07:54.269402-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_051758.wav with timestamp 2019-10-23 05:17:58
+2026-02-25T15:07:54.567465-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_052758.wav with timestamp 2019-10-23 05:27:58
+2026-02-25T15:07:54.877430-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_053758.wav with timestamp 2019-10-23 05:37:58
+2026-02-25T15:07:55.156402-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_054758.wav with timestamp 2019-10-23 05:47:58
+2026-02-25T15:07:55.465694-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_055758.wav with timestamp 2019-10-23 05:57:58
+2026-02-25T15:07:55.871322-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:55.914170-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_060758.wav with timestamp 2019-10-23 06:07:58
+2026-02-25T15:07:56.271029-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_061758.wav with timestamp 2019-10-23 06:17:58
+2026-02-25T15:07:56.643510-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_062758.wav with timestamp 2019-10-23 06:27:58
+2026-02-25T15:07:56.956409-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_063758.wav with timestamp 2019-10-23 06:37:58
+2026-02-25T15:07:57.272732-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_064758.wav with timestamp 2019-10-23 06:47:58
+2026-02-25T15:07:57.616813-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_065758.wav with timestamp 2019-10-23 06:57:58
+2026-02-25T15:07:57.927237-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:57.967798-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_070758.wav with timestamp 2019-10-23 07:07:58
+2026-02-25T15:07:58.242135-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_071758.wav with timestamp 2019-10-23 07:17:58
+2026-02-25T15:07:58.611502-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_072758.wav with timestamp 2019-10-23 07:27:58
+2026-02-25T15:07:58.927228-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_073758.wav with timestamp 2019-10-23 07:37:58
+2026-02-25T15:07:59.228363-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_074758.wav with timestamp 2019-10-23 07:47:58
+2026-02-25T15:07:59.554257-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_075758.wav with timestamp 2019-10-23 07:57:58
+2026-02-25T15:07:59.946841-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:07:59.987207-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_080758.wav with timestamp 2019-10-23 08:07:58
+2026-02-25T15:08:00.288443-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_081758.wav with timestamp 2019-10-23 08:17:58
+2026-02-25T15:08:00.620041-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_082758.wav with timestamp 2019-10-23 08:27:58
+2026-02-25T15:08:00.914096-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_083758.wav with timestamp 2019-10-23 08:37:58
+2026-02-25T15:08:01.237493-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_084758.wav with timestamp 2019-10-23 08:47:58
+2026-02-25T15:08:01.633707-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_085758.wav with timestamp 2019-10-23 08:57:58
+2026-02-25T15:08:01.999811-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:02.042542-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_090758.wav with timestamp 2019-10-23 09:07:58
+2026-02-25T15:08:02.335101-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_091758.wav with timestamp 2019-10-23 09:17:58
+2026-02-25T15:08:02.609925-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_092758.wav with timestamp 2019-10-23 09:27:58
+2026-02-25T15:08:02.887834-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_093758.wav with timestamp 2019-10-23 09:37:58
+2026-02-25T15:08:03.260465-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_094758.wav with timestamp 2019-10-23 09:47:58
+2026-02-25T15:08:03.607387-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_095758.wav with timestamp 2019-10-23 09:57:58
+2026-02-25T15:08:03.913127-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:03.952962-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_100758.wav with timestamp 2019-10-23 10:07:58
+2026-02-25T15:08:04.214959-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_101758.wav with timestamp 2019-10-23 10:17:58
+2026-02-25T15:08:04.631156-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_102758.wav with timestamp 2019-10-23 10:27:58
+2026-02-25T15:08:04.943470-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_103758.wav with timestamp 2019-10-23 10:37:58
+2026-02-25T15:08:05.305688-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_104758.wav with timestamp 2019-10-23 10:47:58
+2026-02-25T15:08:05.768426-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_105758.wav with timestamp 2019-10-23 10:57:58
+2026-02-25T15:08:06.117733-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:06.159056-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_110758.wav with timestamp 2019-10-23 11:07:58
+2026-02-25T15:08:06.477809-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_111758.wav with timestamp 2019-10-23 11:17:58
+2026-02-25T15:08:06.812608-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_112758.wav with timestamp 2019-10-23 11:27:58
+2026-02-25T15:08:07.165773-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_113758.wav with timestamp 2019-10-23 11:37:58
+2026-02-25T15:08:07.425714-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_114758.wav with timestamp 2019-10-23 11:47:58
+2026-02-25T15:08:07.870490-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_115758.wav with timestamp 2019-10-23 11:57:58
+2026-02-25T15:08:08.196624-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:08.241740-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_120758.wav with timestamp 2019-10-23 12:07:58
+2026-02-25T15:08:08.638905-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_121758.wav with timestamp 2019-10-23 12:17:58
+2026-02-25T15:08:08.949581-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_122758.wav with timestamp 2019-10-23 12:27:58
+2026-02-25T15:08:09.307498-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_123758.wav with timestamp 2019-10-23 12:37:58
+2026-02-25T15:08:09.617155-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_124758.wav with timestamp 2019-10-23 12:47:58
+2026-02-25T15:08:09.905435-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_125758.wav with timestamp 2019-10-23 12:57:58
+2026-02-25T15:08:10.305988-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:10.348683-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_130758.wav with timestamp 2019-10-23 13:07:58
+2026-02-25T15:08:10.637080-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_131758.wav with timestamp 2019-10-23 13:17:58
+2026-02-25T15:08:11.102662-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_132758.wav with timestamp 2019-10-23 13:27:58
+2026-02-25T15:08:11.442992-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_133758.wav with timestamp 2019-10-23 13:37:58
+2026-02-25T15:08:11.809699-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_134758.wav with timestamp 2019-10-23 13:47:58
+2026-02-25T15:08:12.117033-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_135758.wav with timestamp 2019-10-23 13:57:58
+2026-02-25T15:08:12.512378-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:12.556406-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_140758.wav with timestamp 2019-10-23 14:07:58
+2026-02-25T15:08:12.887857-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_141758.wav with timestamp 2019-10-23 14:17:58
+2026-02-25T15:08:13.190681-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_142758.wav with timestamp 2019-10-23 14:27:58
+2026-02-25T15:08:13.540147-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_143758.wav with timestamp 2019-10-23 14:37:58
+2026-02-25T15:08:13.899071-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_144758.wav with timestamp 2019-10-23 14:47:58
+2026-02-25T15:08:14.200578-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_145758.wav with timestamp 2019-10-23 14:57:58
+2026-02-25T15:08:14.511457-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:14.551718-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_150758.wav with timestamp 2019-10-23 15:07:58
+2026-02-25T15:08:14.913554-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_151758.wav with timestamp 2019-10-23 15:17:58
+2026-02-25T15:08:15.306352-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_152758.wav with timestamp 2019-10-23 15:27:58
+2026-02-25T15:08:15.664979-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_153758.wav with timestamp 2019-10-23 15:37:58
+2026-02-25T15:08:15.991076-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_154758.wav with timestamp 2019-10-23 15:47:58
+2026-02-25T15:08:16.351105-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_155758.wav with timestamp 2019-10-23 15:57:58
+2026-02-25T15:08:16.698806-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:16.741106-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_160758.wav with timestamp 2019-10-23 16:07:58
+2026-02-25T15:08:17.171266-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_161758.wav with timestamp 2019-10-23 16:17:58
+2026-02-25T15:08:17.506056-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_162758.wav with timestamp 2019-10-23 16:27:58
+2026-02-25T15:08:17.826970-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_163758.wav with timestamp 2019-10-23 16:37:58
+2026-02-25T15:08:18.141374-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_164758.wav with timestamp 2019-10-23 16:47:58
+2026-02-25T15:08:18.559111-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_165758.wav with timestamp 2019-10-23 16:57:58
+2026-02-25T15:08:18.848060-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:18.892023-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_170758.wav with timestamp 2019-10-23 17:07:58
+2026-02-25T15:08:19.212011-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_171758.wav with timestamp 2019-10-23 17:17:58
+2026-02-25T15:08:19.480209-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_172758.wav with timestamp 2019-10-23 17:27:58
+2026-02-25T15:08:19.811892-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_173758.wav with timestamp 2019-10-23 17:37:58
+2026-02-25T15:08:20.173713-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_174758.wav with timestamp 2019-10-23 17:47:58
+2026-02-25T15:08:20.510693-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_175758.wav with timestamp 2019-10-23 17:57:58
+2026-02-25T15:08:20.869943-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:20.909707-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_180758.wav with timestamp 2019-10-23 18:07:58
+2026-02-25T15:08:21.240218-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_181758.wav with timestamp 2019-10-23 18:17:58
+2026-02-25T15:08:21.579185-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_182758.wav with timestamp 2019-10-23 18:27:58
+2026-02-25T15:08:21.902038-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_183758.wav with timestamp 2019-10-23 18:37:58
+2026-02-25T15:08:22.230588-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_184758.wav with timestamp 2019-10-23 18:47:58
+2026-02-25T15:08:22.577771-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_185758.wav with timestamp 2019-10-23 18:57:58
+2026-02-25T15:08:22.950995-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:22.990806-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_190758.wav with timestamp 2019-10-23 19:07:58
+2026-02-25T15:08:23.324519-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_191758.wav with timestamp 2019-10-23 19:17:58
+2026-02-25T15:08:23.614230-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_192758.wav with timestamp 2019-10-23 19:27:58
+2026-02-25T15:08:23.960548-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_193758.wav with timestamp 2019-10-23 19:37:58
+2026-02-25T15:08:24.358316-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_194758.wav with timestamp 2019-10-23 19:47:58
+2026-02-25T15:08:24.726972-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_195758.wav with timestamp 2019-10-23 19:57:58
+2026-02-25T15:08:25.090163-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:25.129171-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_200758.wav with timestamp 2019-10-23 20:07:58
+2026-02-25T15:08:25.459966-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_201758.wav with timestamp 2019-10-23 20:17:58
+2026-02-25T15:08:25.815782-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_202758.wav with timestamp 2019-10-23 20:27:58
+2026-02-25T15:08:26.159735-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_203758.wav with timestamp 2019-10-23 20:37:58
+2026-02-25T15:08:26.501836-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_204758.wav with timestamp 2019-10-23 20:47:58
+2026-02-25T15:08:26.857866-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_205758.wav with timestamp 2019-10-23 20:57:58
+2026-02-25T15:08:27.195524-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:27.235324-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_210758.wav with timestamp 2019-10-23 21:07:58
+2026-02-25T15:08:27.526798-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_211758.wav with timestamp 2019-10-23 21:17:58
+2026-02-25T15:08:27.817577-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_212758.wav with timestamp 2019-10-23 21:27:58
+2026-02-25T15:08:28.116958-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_213758.wav with timestamp 2019-10-23 21:37:58
+2026-02-25T15:08:28.426421-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_214758.wav with timestamp 2019-10-23 21:47:58
+2026-02-25T15:08:28.735815-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_215758.wav with timestamp 2019-10-23 21:57:58
+2026-02-25T15:08:29.076265-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:29.117203-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_220758.wav with timestamp 2019-10-23 22:07:58
+2026-02-25T15:08:29.513295-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_221758.wav with timestamp 2019-10-23 22:17:58
+2026-02-25T15:08:29.865623-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_222758.wav with timestamp 2019-10-23 22:27:58
+2026-02-25T15:08:30.283173-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_223758.wav with timestamp 2019-10-23 22:37:58
+2026-02-25T15:08:30.562557-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_224758.wav with timestamp 2019-10-23 22:47:58
+2026-02-25T15:08:30.941732-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_225758.wav with timestamp 2019-10-23 22:57:58
+2026-02-25T15:08:31.291919-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:31.332301-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_230758.wav with timestamp 2019-10-23 23:07:58
+2026-02-25T15:08:31.644592-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_231758.wav with timestamp 2019-10-23 23:17:58
+2026-02-25T15:08:31.964786-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_232758.wav with timestamp 2019-10-23 23:27:58
+2026-02-25T15:08:32.248730-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_233758.wav with timestamp 2019-10-23 23:37:58
+2026-02-25T15:08:32.579713-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_234758.wav with timestamp 2019-10-23 23:47:58
+2026-02-25T15:08:32.982746-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_235758.wav with timestamp 2019-10-23 23:57:58
+2026-02-25T15:08:33.358392-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:33.481452-0800 WARNING No drift for 2019-10-23 00:00:00
+2026-02-25T15:08:33.485759-0800 INFO Done correcting metadata for 2019-10-23 00:00:00. Saved to json/iclisten/2019/20191023.json
+2026-02-25T15:08:33.486090-0800 INFO IcListenMetadataGenerator 20191023 Searching in s3://pacific-sound-256khz/ for wav or flac files that match the search patterns MARS_* ...
+2026-02-25T15:08:33.490716-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:33.620787-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_230758.wav with timestamp 2019-10-23 23:07:58
+2026-02-25T15:08:33.797604-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_231758.wav with timestamp 2019-10-23 23:17:58
+2026-02-25T15:08:34.009892-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_232758.wav with timestamp 2019-10-23 23:27:58
+2026-02-25T15:08:34.196188-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_233758.wav with timestamp 2019-10-23 23:37:58
+2026-02-25T15:08:34.382818-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_234758.wav with timestamp 2019-10-23 23:47:58
+2026-02-25T15:08:34.576950-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191023_235758.wav with timestamp 2019-10-23 23:57:58
+2026-02-25T15:08:34.763308-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:34.804056-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_000758.wav with timestamp 2019-10-24 00:07:58
+2026-02-25T15:08:35.136970-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_001758.wav with timestamp 2019-10-24 00:17:58
+2026-02-25T15:08:35.470141-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_002758.wav with timestamp 2019-10-24 00:27:58
+2026-02-25T15:08:35.837365-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_003758.wav with timestamp 2019-10-24 00:37:58
+2026-02-25T15:08:36.201079-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_004758.wav with timestamp 2019-10-24 00:47:58
+2026-02-25T15:08:36.570379-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_005758.wav with timestamp 2019-10-24 00:57:58
+2026-02-25T15:08:36.920153-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:36.962739-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_010758.wav with timestamp 2019-10-24 01:07:58
+2026-02-25T15:08:37.307167-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_011758.wav with timestamp 2019-10-24 01:17:58
+2026-02-25T15:08:37.596933-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_012758.wav with timestamp 2019-10-24 01:27:58
+2026-02-25T15:08:37.966451-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_013758.wav with timestamp 2019-10-24 01:37:58
+2026-02-25T15:08:38.294306-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_014758.wav with timestamp 2019-10-24 01:47:58
+2026-02-25T15:08:38.625736-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_015758.wav with timestamp 2019-10-24 01:57:58
+2026-02-25T15:08:39.009744-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:39.050383-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_020758.wav with timestamp 2019-10-24 02:07:58
+2026-02-25T15:08:39.424113-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_021758.wav with timestamp 2019-10-24 02:17:58
+2026-02-25T15:08:39.776061-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_022758.wav with timestamp 2019-10-24 02:27:58
+2026-02-25T15:08:40.146095-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_023758.wav with timestamp 2019-10-24 02:37:58
+2026-02-25T15:08:40.510311-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_024758.wav with timestamp 2019-10-24 02:47:58
+2026-02-25T15:08:40.859316-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_025758.wav with timestamp 2019-10-24 02:57:58
+2026-02-25T15:08:41.263387-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:41.305848-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_030758.wav with timestamp 2019-10-24 03:07:58
+2026-02-25T15:08:41.577473-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_031758.wav with timestamp 2019-10-24 03:17:58
+2026-02-25T15:08:41.981599-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_032758.wav with timestamp 2019-10-24 03:27:58
+2026-02-25T15:08:42.330252-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_033758.wav with timestamp 2019-10-24 03:37:58
+2026-02-25T15:08:42.741874-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_034758.wav with timestamp 2019-10-24 03:47:58
+2026-02-25T15:08:43.063537-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_035758.wav with timestamp 2019-10-24 03:57:58
+2026-02-25T15:08:43.363209-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:43.406061-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_040758.wav with timestamp 2019-10-24 04:07:58
+2026-02-25T15:08:43.751375-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_041758.wav with timestamp 2019-10-24 04:17:58
+2026-02-25T15:08:44.067952-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_042758.wav with timestamp 2019-10-24 04:27:58
+2026-02-25T15:08:44.538823-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_043758.wav with timestamp 2019-10-24 04:37:58
+2026-02-25T15:08:44.841179-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_044758.wav with timestamp 2019-10-24 04:47:58
+2026-02-25T15:08:45.128011-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_045758.wav with timestamp 2019-10-24 04:57:58
+2026-02-25T15:08:45.452942-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:45.492514-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_050758.wav with timestamp 2019-10-24 05:07:58
+2026-02-25T15:08:45.818996-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_051758.wav with timestamp 2019-10-24 05:17:58
+2026-02-25T15:08:46.133932-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_052758.wav with timestamp 2019-10-24 05:27:58
+2026-02-25T15:08:46.443567-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_053758.wav with timestamp 2019-10-24 05:37:58
+2026-02-25T15:08:46.791913-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_054758.wav with timestamp 2019-10-24 05:47:58
+2026-02-25T15:08:47.126473-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_055758.wav with timestamp 2019-10-24 05:57:58
+2026-02-25T15:08:47.460341-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:47.503734-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_060758.wav with timestamp 2019-10-24 06:07:58
+2026-02-25T15:08:47.912029-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_061758.wav with timestamp 2019-10-24 06:17:58
+2026-02-25T15:08:48.190380-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_062758.wav with timestamp 2019-10-24 06:27:58
+2026-02-25T15:08:48.459715-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_063758.wav with timestamp 2019-10-24 06:37:58
+2026-02-25T15:08:48.811023-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_064758.wav with timestamp 2019-10-24 06:47:58
+2026-02-25T15:08:49.090330-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_065758.wav with timestamp 2019-10-24 06:57:58
+2026-02-25T15:08:49.396245-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:49.438522-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_070758.wav with timestamp 2019-10-24 07:07:58
+2026-02-25T15:08:49.766727-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_071758.wav with timestamp 2019-10-24 07:17:58
+2026-02-25T15:08:50.102081-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_072758.wav with timestamp 2019-10-24 07:27:58
+2026-02-25T15:08:50.387128-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_073758.wav with timestamp 2019-10-24 07:37:58
+2026-02-25T15:08:50.682375-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_074758.wav with timestamp 2019-10-24 07:47:58
+2026-02-25T15:08:51.027355-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_075758.wav with timestamp 2019-10-24 07:57:58
+2026-02-25T15:08:51.345690-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:51.387363-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_080758.wav with timestamp 2019-10-24 08:07:58
+2026-02-25T15:08:51.681092-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_081758.wav with timestamp 2019-10-24 08:17:58
+2026-02-25T15:08:52.062919-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_082758.wav with timestamp 2019-10-24 08:27:58
+2026-02-25T15:08:52.426551-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_083758.wav with timestamp 2019-10-24 08:37:58
+2026-02-25T15:08:52.742989-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_084758.wav with timestamp 2019-10-24 08:47:58
+2026-02-25T15:08:53.106494-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_085758.wav with timestamp 2019-10-24 08:57:58
+2026-02-25T15:08:53.477174-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:53.520951-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_090758.wav with timestamp 2019-10-24 09:07:58
+2026-02-25T15:08:53.908542-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_091758.wav with timestamp 2019-10-24 09:17:58
+2026-02-25T15:08:54.262513-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_092758.wav with timestamp 2019-10-24 09:27:58
+2026-02-25T15:08:54.542886-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_093758.wav with timestamp 2019-10-24 09:37:58
+2026-02-25T15:08:54.882581-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_094758.wav with timestamp 2019-10-24 09:47:58
+2026-02-25T15:08:55.285356-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_095758.wav with timestamp 2019-10-24 09:57:58
+2026-02-25T15:08:55.645935-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:55.686610-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_100758.wav with timestamp 2019-10-24 10:07:58
+2026-02-25T15:08:55.941799-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_101758.wav with timestamp 2019-10-24 10:17:58
+2026-02-25T15:08:56.289455-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_102758.wav with timestamp 2019-10-24 10:27:58
+2026-02-25T15:08:56.643551-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_103758.wav with timestamp 2019-10-24 10:37:58
+2026-02-25T15:08:56.966119-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_104758.wav with timestamp 2019-10-24 10:47:58
+2026-02-25T15:08:57.290529-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_105758.wav with timestamp 2019-10-24 10:57:58
+2026-02-25T15:08:57.582661-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:57.625839-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_110758.wav with timestamp 2019-10-24 11:07:58
+2026-02-25T15:08:57.900801-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_111758.wav with timestamp 2019-10-24 11:17:58
+2026-02-25T15:08:58.204321-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_112758.wav with timestamp 2019-10-24 11:27:58
+2026-02-25T15:08:58.609983-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_113758.wav with timestamp 2019-10-24 11:37:58
+2026-02-25T15:08:59.011884-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_114758.wav with timestamp 2019-10-24 11:47:58
+2026-02-25T15:08:59.405388-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_115758.wav with timestamp 2019-10-24 11:57:58
+2026-02-25T15:08:59.737360-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:08:59.778360-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_120758.wav with timestamp 2019-10-24 12:07:58
+2026-02-25T15:09:00.203096-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_121758.wav with timestamp 2019-10-24 12:17:58
+2026-02-25T15:09:00.551076-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_122758.wav with timestamp 2019-10-24 12:27:58
+2026-02-25T15:09:00.877984-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_123758.wav with timestamp 2019-10-24 12:37:58
+2026-02-25T15:09:01.135268-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_124758.wav with timestamp 2019-10-24 12:47:58
+2026-02-25T15:09:01.641810-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_125758.wav with timestamp 2019-10-24 12:57:58
+2026-02-25T15:09:01.975440-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:02.016951-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_130758.wav with timestamp 2019-10-24 13:07:58
+2026-02-25T15:09:02.387419-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_131758.wav with timestamp 2019-10-24 13:17:58
+2026-02-25T15:09:02.718925-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_132758.wav with timestamp 2019-10-24 13:27:58
+2026-02-25T15:09:03.140486-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_133758.wav with timestamp 2019-10-24 13:37:58
+2026-02-25T15:09:03.472212-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_134758.wav with timestamp 2019-10-24 13:47:58
+2026-02-25T15:09:03.776718-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_135758.wav with timestamp 2019-10-24 13:57:58
+2026-02-25T15:09:04.143375-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:04.185727-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_140758.wav with timestamp 2019-10-24 14:07:58
+2026-02-25T15:09:04.542013-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_141758.wav with timestamp 2019-10-24 14:17:58
+2026-02-25T15:09:04.871536-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_142758.wav with timestamp 2019-10-24 14:27:58
+2026-02-25T15:09:05.260645-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_143758.wav with timestamp 2019-10-24 14:37:58
+2026-02-25T15:09:05.613266-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_144758.wav with timestamp 2019-10-24 14:47:58
+2026-02-25T15:09:05.953519-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_145758.wav with timestamp 2019-10-24 14:57:58
+2026-02-25T15:09:06.266746-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:06.307025-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_150758.wav with timestamp 2019-10-24 15:07:58
+2026-02-25T15:09:06.658713-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_151758.wav with timestamp 2019-10-24 15:17:58
+2026-02-25T15:09:06.973275-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_152758.wav with timestamp 2019-10-24 15:27:58
+2026-02-25T15:09:07.299864-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_153758.wav with timestamp 2019-10-24 15:37:58
+2026-02-25T15:09:07.720766-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_154758.wav with timestamp 2019-10-24 15:47:58
+2026-02-25T15:09:08.140322-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_155758.wav with timestamp 2019-10-24 15:57:58
+2026-02-25T15:09:08.429685-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:08.470618-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_160758.wav with timestamp 2019-10-24 16:07:58
+2026-02-25T15:09:08.794874-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_161758.wav with timestamp 2019-10-24 16:17:58
+2026-02-25T15:09:09.110880-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_162758.wav with timestamp 2019-10-24 16:27:58
+2026-02-25T15:09:09.510507-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_163758.wav with timestamp 2019-10-24 16:37:58
+2026-02-25T15:09:09.875497-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_164758.wav with timestamp 2019-10-24 16:47:58
+2026-02-25T15:09:10.231222-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_165758.wav with timestamp 2019-10-24 16:57:58
+2026-02-25T15:09:10.589205-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:10.630505-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_170758.wav with timestamp 2019-10-24 17:07:58
+2026-02-25T15:09:10.893664-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_171758.wav with timestamp 2019-10-24 17:17:58
+2026-02-25T15:09:11.296311-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_172758.wav with timestamp 2019-10-24 17:27:58
+2026-02-25T15:09:11.631256-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_173758.wav with timestamp 2019-10-24 17:37:58
+2026-02-25T15:09:11.940252-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_174758.wav with timestamp 2019-10-24 17:47:58
+2026-02-25T15:09:12.284165-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_175758.wav with timestamp 2019-10-24 17:57:58
+2026-02-25T15:09:12.593079-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:12.633659-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_180758.wav with timestamp 2019-10-24 18:07:58
+2026-02-25T15:09:12.938170-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_181758.wav with timestamp 2019-10-24 18:17:58
+2026-02-25T15:09:13.260507-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_182758.wav with timestamp 2019-10-24 18:27:58
+2026-02-25T15:09:13.611671-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_183758.wav with timestamp 2019-10-24 18:37:58
+2026-02-25T15:09:13.977056-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_184758.wav with timestamp 2019-10-24 18:47:58
+2026-02-25T15:09:14.305736-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_185758.wav with timestamp 2019-10-24 18:57:58
+2026-02-25T15:09:14.717682-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:14.757435-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_190758.wav with timestamp 2019-10-24 19:07:58
+2026-02-25T15:09:15.088754-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_191758.wav with timestamp 2019-10-24 19:17:58
+2026-02-25T15:09:15.375352-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_192758.wav with timestamp 2019-10-24 19:27:58
+2026-02-25T15:09:15.666595-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_193758.wav with timestamp 2019-10-24 19:37:58
+2026-02-25T15:09:15.982606-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_194758.wav with timestamp 2019-10-24 19:47:58
+2026-02-25T15:09:16.318456-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_195758.wav with timestamp 2019-10-24 19:57:58
+2026-02-25T15:09:16.729879-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:16.770208-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_200758.wav with timestamp 2019-10-24 20:07:58
+2026-02-25T15:09:17.160065-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_201758.wav with timestamp 2019-10-24 20:17:58
+2026-02-25T15:09:17.535292-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_202758.wav with timestamp 2019-10-24 20:27:58
+2026-02-25T15:09:17.862820-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_203758.wav with timestamp 2019-10-24 20:37:58
+2026-02-25T15:09:18.175759-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_204758.wav with timestamp 2019-10-24 20:47:58
+2026-02-25T15:09:18.497134-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_205758.wav with timestamp 2019-10-24 20:57:58
+2026-02-25T15:09:18.880604-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:18.920920-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_210758.wav with timestamp 2019-10-24 21:07:58
+2026-02-25T15:09:19.266837-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_211758.wav with timestamp 2019-10-24 21:17:58
+2026-02-25T15:09:19.627259-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_212758.wav with timestamp 2019-10-24 21:27:58
+2026-02-25T15:09:19.997738-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_213758.wav with timestamp 2019-10-24 21:37:58
+2026-02-25T15:09:20.346571-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_214758.wav with timestamp 2019-10-24 21:47:58
+2026-02-25T15:09:20.685413-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_215758.wav with timestamp 2019-10-24 21:57:58
+2026-02-25T15:09:21.047595-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:21.088566-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_220758.wav with timestamp 2019-10-24 22:07:58
+2026-02-25T15:09:21.378588-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_221758.wav with timestamp 2019-10-24 22:17:58
+2026-02-25T15:09:21.698887-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_222758.wav with timestamp 2019-10-24 22:27:58
+2026-02-25T15:09:22.028047-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_223758.wav with timestamp 2019-10-24 22:37:58
+2026-02-25T15:09:22.427869-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_224758.wav with timestamp 2019-10-24 22:47:58
+2026-02-25T15:09:22.734276-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_225758.wav with timestamp 2019-10-24 22:57:58
+2026-02-25T15:09:23.081937-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:23.121118-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_230758.wav with timestamp 2019-10-24 23:07:58
+2026-02-25T15:09:23.438973-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_231758.wav with timestamp 2019-10-24 23:17:58
+2026-02-25T15:09:23.779827-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_232758.wav with timestamp 2019-10-24 23:27:58
+2026-02-25T15:09:24.039903-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_233758.wav with timestamp 2019-10-24 23:37:58
+2026-02-25T15:09:24.346002-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_234758.wav with timestamp 2019-10-24 23:47:58
+2026-02-25T15:09:24.745234-0800 INFO Found s3://pacific-sound-256khz-2019/10/MARS_20191024_235758.wav with timestamp 2019-10-24 23:57:58
+2026-02-25T15:09:25.100747-0800 INFO IcListenMetadataGenerator 20191023 Searching in bucket: pacific-sound-256khz-2019 prefixes: ['MARS_']
+2026-02-25T15:09:25.227007-0800 INFO Done correcting metadata for 2019-10-24 00:00:00. Saved to json/iclisten/2019/20191024.json

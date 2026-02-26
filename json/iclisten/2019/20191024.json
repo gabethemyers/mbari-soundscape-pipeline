@@ -1,0 +1,1017 @@
+[
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191023_235758.wav",
+        "start": "2019-10-23T23:57:58Z",
+        "end": "2019-10-24T00:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_000758.wav",
+        "start": "2019-10-24T00:07:58Z",
+        "end": "2019-10-24T00:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_001758.wav",
+        "start": "2019-10-24T00:17:58Z",
+        "end": "2019-10-24T00:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_002758.wav",
+        "start": "2019-10-24T00:27:58Z",
+        "end": "2019-10-24T00:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_003758.wav",
+        "start": "2019-10-24T00:37:58Z",
+        "end": "2019-10-24T00:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_004758.wav",
+        "start": "2019-10-24T00:47:58Z",
+        "end": "2019-10-24T00:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_005758.wav",
+        "start": "2019-10-24T00:57:58Z",
+        "end": "2019-10-24T01:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_010758.wav",
+        "start": "2019-10-24T01:07:58Z",
+        "end": "2019-10-24T01:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_011758.wav",
+        "start": "2019-10-24T01:17:58Z",
+        "end": "2019-10-24T01:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_012758.wav",
+        "start": "2019-10-24T01:27:58Z",
+        "end": "2019-10-24T01:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_013758.wav",
+        "start": "2019-10-24T01:37:58Z",
+        "end": "2019-10-24T01:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_014758.wav",
+        "start": "2019-10-24T01:47:58Z",
+        "end": "2019-10-24T01:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_015758.wav",
+        "start": "2019-10-24T01:57:58Z",
+        "end": "2019-10-24T02:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_020758.wav",
+        "start": "2019-10-24T02:07:58Z",
+        "end": "2019-10-24T02:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_021758.wav",
+        "start": "2019-10-24T02:17:58Z",
+        "end": "2019-10-24T02:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_022758.wav",
+        "start": "2019-10-24T02:27:58Z",
+        "end": "2019-10-24T02:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_023758.wav",
+        "start": "2019-10-24T02:37:58Z",
+        "end": "2019-10-24T02:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_024758.wav",
+        "start": "2019-10-24T02:47:58Z",
+        "end": "2019-10-24T02:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_025758.wav",
+        "start": "2019-10-24T02:57:58Z",
+        "end": "2019-10-24T03:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_030758.wav",
+        "start": "2019-10-24T03:07:58Z",
+        "end": "2019-10-24T03:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_031758.wav",
+        "start": "2019-10-24T03:17:58Z",
+        "end": "2019-10-24T03:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_032758.wav",
+        "start": "2019-10-24T03:27:58Z",
+        "end": "2019-10-24T03:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_033758.wav",
+        "start": "2019-10-24T03:37:58Z",
+        "end": "2019-10-24T03:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_034758.wav",
+        "start": "2019-10-24T03:47:58Z",
+        "end": "2019-10-24T03:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_035758.wav",
+        "start": "2019-10-24T03:57:58Z",
+        "end": "2019-10-24T04:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_040758.wav",
+        "start": "2019-10-24T04:07:58Z",
+        "end": "2019-10-24T04:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_041758.wav",
+        "start": "2019-10-24T04:17:58Z",
+        "end": "2019-10-24T04:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_042758.wav",
+        "start": "2019-10-24T04:27:58Z",
+        "end": "2019-10-24T04:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_043758.wav",
+        "start": "2019-10-24T04:37:58Z",
+        "end": "2019-10-24T04:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_044758.wav",
+        "start": "2019-10-24T04:47:58Z",
+        "end": "2019-10-24T04:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_045758.wav",
+        "start": "2019-10-24T04:57:58Z",
+        "end": "2019-10-24T05:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_050758.wav",
+        "start": "2019-10-24T05:07:58Z",
+        "end": "2019-10-24T05:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_051758.wav",
+        "start": "2019-10-24T05:17:58Z",
+        "end": "2019-10-24T05:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_052758.wav",
+        "start": "2019-10-24T05:27:58Z",
+        "end": "2019-10-24T05:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_053758.wav",
+        "start": "2019-10-24T05:37:58Z",
+        "end": "2019-10-24T05:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_054758.wav",
+        "start": "2019-10-24T05:47:58Z",
+        "end": "2019-10-24T05:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_055758.wav",
+        "start": "2019-10-24T05:57:58Z",
+        "end": "2019-10-24T06:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_060758.wav",
+        "start": "2019-10-24T06:07:58Z",
+        "end": "2019-10-24T06:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_061758.wav",
+        "start": "2019-10-24T06:17:58Z",
+        "end": "2019-10-24T06:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_062758.wav",
+        "start": "2019-10-24T06:27:58Z",
+        "end": "2019-10-24T06:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_063758.wav",
+        "start": "2019-10-24T06:37:58Z",
+        "end": "2019-10-24T06:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_064758.wav",
+        "start": "2019-10-24T06:47:58Z",
+        "end": "2019-10-24T06:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_065758.wav",
+        "start": "2019-10-24T06:57:58Z",
+        "end": "2019-10-24T07:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_070758.wav",
+        "start": "2019-10-24T07:07:58Z",
+        "end": "2019-10-24T07:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_071758.wav",
+        "start": "2019-10-24T07:17:58Z",
+        "end": "2019-10-24T07:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_072758.wav",
+        "start": "2019-10-24T07:27:58Z",
+        "end": "2019-10-24T07:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_073758.wav",
+        "start": "2019-10-24T07:37:58Z",
+        "end": "2019-10-24T07:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_074758.wav",
+        "start": "2019-10-24T07:47:58Z",
+        "end": "2019-10-24T07:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_075758.wav",
+        "start": "2019-10-24T07:57:58Z",
+        "end": "2019-10-24T08:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_080758.wav",
+        "start": "2019-10-24T08:07:58Z",
+        "end": "2019-10-24T08:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_081758.wav",
+        "start": "2019-10-24T08:17:58Z",
+        "end": "2019-10-24T08:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_082758.wav",
+        "start": "2019-10-24T08:27:58Z",
+        "end": "2019-10-24T08:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_083758.wav",
+        "start": "2019-10-24T08:37:58Z",
+        "end": "2019-10-24T08:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_084758.wav",
+        "start": "2019-10-24T08:47:58Z",
+        "end": "2019-10-24T08:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_085758.wav",
+        "start": "2019-10-24T08:57:58Z",
+        "end": "2019-10-24T09:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_090758.wav",
+        "start": "2019-10-24T09:07:58Z",
+        "end": "2019-10-24T09:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_091758.wav",
+        "start": "2019-10-24T09:17:58Z",
+        "end": "2019-10-24T09:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_092758.wav",
+        "start": "2019-10-24T09:27:58Z",
+        "end": "2019-10-24T09:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_093758.wav",
+        "start": "2019-10-24T09:37:58Z",
+        "end": "2019-10-24T09:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_094758.wav",
+        "start": "2019-10-24T09:47:58Z",
+        "end": "2019-10-24T09:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_095758.wav",
+        "start": "2019-10-24T09:57:58Z",
+        "end": "2019-10-24T10:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_100758.wav",
+        "start": "2019-10-24T10:07:58Z",
+        "end": "2019-10-24T10:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_101758.wav",
+        "start": "2019-10-24T10:17:58Z",
+        "end": "2019-10-24T10:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_102758.wav",
+        "start": "2019-10-24T10:27:58Z",
+        "end": "2019-10-24T10:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_103758.wav",
+        "start": "2019-10-24T10:37:58Z",
+        "end": "2019-10-24T10:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_104758.wav",
+        "start": "2019-10-24T10:47:58Z",
+        "end": "2019-10-24T10:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_105758.wav",
+        "start": "2019-10-24T10:57:58Z",
+        "end": "2019-10-24T11:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_110758.wav",
+        "start": "2019-10-24T11:07:58Z",
+        "end": "2019-10-24T11:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_111758.wav",
+        "start": "2019-10-24T11:17:58Z",
+        "end": "2019-10-24T11:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_112758.wav",
+        "start": "2019-10-24T11:27:58Z",
+        "end": "2019-10-24T11:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_113758.wav",
+        "start": "2019-10-24T11:37:58Z",
+        "end": "2019-10-24T11:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_114758.wav",
+        "start": "2019-10-24T11:47:58Z",
+        "end": "2019-10-24T11:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_115758.wav",
+        "start": "2019-10-24T11:57:58Z",
+        "end": "2019-10-24T12:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_120758.wav",
+        "start": "2019-10-24T12:07:58Z",
+        "end": "2019-10-24T12:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_121758.wav",
+        "start": "2019-10-24T12:17:58Z",
+        "end": "2019-10-24T12:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_122758.wav",
+        "start": "2019-10-24T12:27:58Z",
+        "end": "2019-10-24T12:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_123758.wav",
+        "start": "2019-10-24T12:37:58Z",
+        "end": "2019-10-24T12:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_124758.wav",
+        "start": "2019-10-24T12:47:58Z",
+        "end": "2019-10-24T12:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_125758.wav",
+        "start": "2019-10-24T12:57:58Z",
+        "end": "2019-10-24T13:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_130758.wav",
+        "start": "2019-10-24T13:07:58Z",
+        "end": "2019-10-24T13:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_131758.wav",
+        "start": "2019-10-24T13:17:58Z",
+        "end": "2019-10-24T13:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_132758.wav",
+        "start": "2019-10-24T13:27:58Z",
+        "end": "2019-10-24T13:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_133758.wav",
+        "start": "2019-10-24T13:37:58Z",
+        "end": "2019-10-24T13:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_134758.wav",
+        "start": "2019-10-24T13:47:58Z",
+        "end": "2019-10-24T13:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_135758.wav",
+        "start": "2019-10-24T13:57:58Z",
+        "end": "2019-10-24T14:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_140758.wav",
+        "start": "2019-10-24T14:07:58Z",
+        "end": "2019-10-24T14:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_141758.wav",
+        "start": "2019-10-24T14:17:58Z",
+        "end": "2019-10-24T14:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_142758.wav",
+        "start": "2019-10-24T14:27:58Z",
+        "end": "2019-10-24T14:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_143758.wav",
+        "start": "2019-10-24T14:37:58Z",
+        "end": "2019-10-24T14:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_144758.wav",
+        "start": "2019-10-24T14:47:58Z",
+        "end": "2019-10-24T14:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_145758.wav",
+        "start": "2019-10-24T14:57:58Z",
+        "end": "2019-10-24T15:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_150758.wav",
+        "start": "2019-10-24T15:07:58Z",
+        "end": "2019-10-24T15:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_151758.wav",
+        "start": "2019-10-24T15:17:58Z",
+        "end": "2019-10-24T15:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_152758.wav",
+        "start": "2019-10-24T15:27:58Z",
+        "end": "2019-10-24T15:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_153758.wav",
+        "start": "2019-10-24T15:37:58Z",
+        "end": "2019-10-24T15:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_154758.wav",
+        "start": "2019-10-24T15:47:58Z",
+        "end": "2019-10-24T15:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_155758.wav",
+        "start": "2019-10-24T15:57:58Z",
+        "end": "2019-10-24T16:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_160758.wav",
+        "start": "2019-10-24T16:07:58Z",
+        "end": "2019-10-24T16:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_161758.wav",
+        "start": "2019-10-24T16:17:58Z",
+        "end": "2019-10-24T16:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_162758.wav",
+        "start": "2019-10-24T16:27:58Z",
+        "end": "2019-10-24T16:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_163758.wav",
+        "start": "2019-10-24T16:37:58Z",
+        "end": "2019-10-24T16:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_164758.wav",
+        "start": "2019-10-24T16:47:58Z",
+        "end": "2019-10-24T16:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_165758.wav",
+        "start": "2019-10-24T16:57:58Z",
+        "end": "2019-10-24T17:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_170758.wav",
+        "start": "2019-10-24T17:07:58Z",
+        "end": "2019-10-24T17:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_171758.wav",
+        "start": "2019-10-24T17:17:58Z",
+        "end": "2019-10-24T17:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_172758.wav",
+        "start": "2019-10-24T17:27:58Z",
+        "end": "2019-10-24T17:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_173758.wav",
+        "start": "2019-10-24T17:37:58Z",
+        "end": "2019-10-24T17:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_174758.wav",
+        "start": "2019-10-24T17:47:58Z",
+        "end": "2019-10-24T17:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_175758.wav",
+        "start": "2019-10-24T17:57:58Z",
+        "end": "2019-10-24T18:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_180758.wav",
+        "start": "2019-10-24T18:07:58Z",
+        "end": "2019-10-24T18:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_181758.wav",
+        "start": "2019-10-24T18:17:58Z",
+        "end": "2019-10-24T18:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_182758.wav",
+        "start": "2019-10-24T18:27:58Z",
+        "end": "2019-10-24T18:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_183758.wav",
+        "start": "2019-10-24T18:37:58Z",
+        "end": "2019-10-24T18:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_184758.wav",
+        "start": "2019-10-24T18:47:58Z",
+        "end": "2019-10-24T18:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_185758.wav",
+        "start": "2019-10-24T18:57:58Z",
+        "end": "2019-10-24T19:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_190758.wav",
+        "start": "2019-10-24T19:07:58Z",
+        "end": "2019-10-24T19:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_191758.wav",
+        "start": "2019-10-24T19:17:58Z",
+        "end": "2019-10-24T19:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_192758.wav",
+        "start": "2019-10-24T19:27:58Z",
+        "end": "2019-10-24T19:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_193758.wav",
+        "start": "2019-10-24T19:37:58Z",
+        "end": "2019-10-24T19:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_194758.wav",
+        "start": "2019-10-24T19:47:58Z",
+        "end": "2019-10-24T19:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_195758.wav",
+        "start": "2019-10-24T19:57:58Z",
+        "end": "2019-10-24T20:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_200758.wav",
+        "start": "2019-10-24T20:07:58Z",
+        "end": "2019-10-24T20:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_201758.wav",
+        "start": "2019-10-24T20:17:58Z",
+        "end": "2019-10-24T20:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_202758.wav",
+        "start": "2019-10-24T20:27:58Z",
+        "end": "2019-10-24T20:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_203758.wav",
+        "start": "2019-10-24T20:37:58Z",
+        "end": "2019-10-24T20:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_204758.wav",
+        "start": "2019-10-24T20:47:58Z",
+        "end": "2019-10-24T20:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_205758.wav",
+        "start": "2019-10-24T20:57:58Z",
+        "end": "2019-10-24T21:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_210758.wav",
+        "start": "2019-10-24T21:07:58Z",
+        "end": "2019-10-24T21:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_211758.wav",
+        "start": "2019-10-24T21:17:58Z",
+        "end": "2019-10-24T21:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_212758.wav",
+        "start": "2019-10-24T21:27:58Z",
+        "end": "2019-10-24T21:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_213758.wav",
+        "start": "2019-10-24T21:37:58Z",
+        "end": "2019-10-24T21:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_214758.wav",
+        "start": "2019-10-24T21:47:58Z",
+        "end": "2019-10-24T21:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_215758.wav",
+        "start": "2019-10-24T21:57:58Z",
+        "end": "2019-10-24T22:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_220758.wav",
+        "start": "2019-10-24T22:07:58Z",
+        "end": "2019-10-24T22:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_221758.wav",
+        "start": "2019-10-24T22:17:58Z",
+        "end": "2019-10-24T22:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_222758.wav",
+        "start": "2019-10-24T22:27:58Z",
+        "end": "2019-10-24T22:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_223758.wav",
+        "start": "2019-10-24T22:37:58Z",
+        "end": "2019-10-24T22:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_224758.wav",
+        "start": "2019-10-24T22:47:58Z",
+        "end": "2019-10-24T22:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_225758.wav",
+        "start": "2019-10-24T22:57:58Z",
+        "end": "2019-10-24T23:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_230758.wav",
+        "start": "2019-10-24T23:07:58Z",
+        "end": "2019-10-24T23:17:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_231758.wav",
+        "start": "2019-10-24T23:17:58Z",
+        "end": "2019-10-24T23:27:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_232758.wav",
+        "start": "2019-10-24T23:27:58Z",
+        "end": "2019-10-24T23:37:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_233758.wav",
+        "start": "2019-10-24T23:37:58Z",
+        "end": "2019-10-24T23:47:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_234758.wav",
+        "start": "2019-10-24T23:47:58Z",
+        "end": "2019-10-24T23:57:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    },
+    {
+        "uri": "s3://pacific-sound-256khz-2019/10/MARS_20191024_235758.wav",
+        "start": "2019-10-24T23:57:58Z",
+        "end": "2019-10-25T00:07:58Z",
+        "duration_secs": 600.0,
+        "channels": 1
+    }
+]
