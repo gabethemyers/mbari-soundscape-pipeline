@@ -23,11 +23,12 @@ def generate_month_ranges() -> list[dict]:
         end_month = 3 if year == 2026 else 12
         for month in range(start_month, end_month + 1):
             last_day = calendar.monthrange(year, month)[1]
+            start_day = 28 if year == 2015 and month == 7 else 1
             ranges.append({
                 "key": f"{year}-{month:02d}",
                 "year": year,
                 "month": month,
-                "start": f"{year}{month:02d}01",
+                "start": f"{year}{month:02d}{start_day:02d}",
                 "end": f"{year}{month:02d}{last_day:02d}",
             })
     return ranges
