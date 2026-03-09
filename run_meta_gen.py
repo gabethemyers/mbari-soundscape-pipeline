@@ -3,7 +3,6 @@ import json
 import os
 from pathlib import Path
 import subprocess
-import itertools
 import calendar
 
 # --- Configuration ---
@@ -85,8 +84,10 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
         return (key, result.stdout, result.stderr if result.returncode != 0 else None)
     except subprocess.TimeoutExpired:
         return (key, None, "Timed out after 45 minutes")
+    except Exception as e:
+        return (key, None, str(e))
 
-def convert_month_to_ndjson(month_config: dict) -> None:
+def convert_month_to_ndjson(month_config: dict) -> tuple[bool, str | None]:
     """Convert a single month's PBP JSON files to NDJSON in Hive-partitioned structure."""
     year = month_config["year"]
     month = month_config["month"]
@@ -99,8 +100,7 @@ def convert_month_to_ndjson(month_config: dict) -> None:
     json_files = list(input_dir.glob(f"{year}{month:02d}*.json"))
 
     if not json_files:
-        print(f"No JSON files found for {month_config['key']}")
-        return
+        return (False, f"No JSON files found for {month_config['key']}")
 
     for input_path in json_files:
         output_path = output_dir / input_path.with_suffix(".ndjson").name
@@ -108,14 +108,14 @@ def convert_month_to_ndjson(month_config: dict) -> None:
             with open(input_path) as f:
                 data = json.load(f)
             if not isinstance(data, list):
-                print(f"Skipping {input_path}: not a JSON array")
-                continue
+                return (False, f"Skipping {input_path}: not a JSON array")
             with open(output_path, "w") as f:
                 for record in data:
                     f.write(json.dumps(record) + "\n")
             print(f"Converted: {input_path} -> {output_path}")
         except Exception as e:
-            print(f"Error converting {input_path}: {e}")
+            return (False, f"Error converting {input_path}: {e}")
+    return (True, None)
         
 def main():
     ensure_dirs()
@@ -133,13 +133,18 @@ def main():
 
     with multiprocessing.Pool(processes=BATCH_SIZE) as pool:
         for batch in batches:
-            results = pool.map(run_meta_gen, batch)
+            batch_by_key = {month["key"]: month for month in batch}
+            results = pool.imap_unordered(run_meta_gen, batch)
             for key, stdout, stderr in results:
                 if stderr is None:
-                    print(f"{key}: success")
-                    status["completed"].append(key)
-                    status["failed"].pop(key, None)
-                    convert_month_to_ndjson(next(m for m in batch if m["key"] == key))
+                    conversion_ok, conversion_error = convert_month_to_ndjson(batch_by_key[key])
+                    if conversion_ok:
+                        print(f"{key}: success")
+                        status["completed"].append(key)
+                        status["failed"].pop(key, None)
+                    else:
+                        print(f"{key}: failed during NDJSON conversion - {conversion_error[:200]}")
+                        status["failed"][key] = conversion_error
                 else:
                     print(f"{key}: failed — {stderr[:200]}")
                     status["failed"][key] = stderr
