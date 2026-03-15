@@ -1,5 +1,6 @@
 json/
 output/
 ndjson/
+logs/
 status.json
 venv/

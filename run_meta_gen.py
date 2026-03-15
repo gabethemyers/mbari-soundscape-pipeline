@@ -4,6 +4,10 @@ import os
 from pathlib import Path
 import subprocess
 import calendar
+import datetime
+import multiprocessing
+import threading
+import tempfile
 
 # --- Configuration ---
 
@@ -11,6 +15,7 @@ STATUS_FILE = "status.json"
 JSON_BASE_DIR = "json/iclisten"
 OUTPUT_DIR = "output"
 NDJSON_DIR = "ndjson"
+LOG_DIR = "logs"
 URI = "s3://pacific-sound-256khz"
 PREFIX = "MARS_"
 RECORDER = "ICLISTEN"
@@ -34,6 +39,26 @@ def generate_month_ranges() -> list[dict]:
     return ranges
 
 MONTH_RANGES = generate_month_ranges()
+
+# One day range for testing
+# MONTH_RANGES = [
+#     {
+#         "key": "2019-07",
+#         "year": 2019,
+#         "month": 7,
+#         "start": "20190701",
+#         "end": "20190702",
+#     }
+# ]
+
+# multiple one day months to test meta gen running in parallel
+MONTH_RANGES = [
+    {"key": "2016-03", "year": 2016, "month": 3, "start": "20160301", "end": "20160301"},
+    {"key": "2018-06", "year": 2018, "month": 6, "start": "20180601", "end": "20180601"},
+    {"key": "2020-01", "year": 2020, "month": 1, "start": "20200101", "end": "20200101"},
+    {"key": "2022-09", "year": 2022, "month": 9, "start": "20220901", "end": "20220901"},
+    {"key": "2025-12", "year": 2025, "month": 12, "start": "20251201", "end": "20251201"},
+]
 
 # in months
 BATCH_SIZE = 10
@@ -60,38 +85,100 @@ def get_pending_months(status: dict) -> list[dict]:
 # --- Directory Setup ---
 
 def ensure_dirs():
-    for d in [JSON_BASE_DIR, OUTPUT_DIR, NDJSON_DIR]:
+    for d in [JSON_BASE_DIR, OUTPUT_DIR, NDJSON_DIR, LOG_DIR]:
         os.makedirs(d, exist_ok=True)
-        
+
+# --- Logging ---
+
+_LOG_QUEUE = None
+
+def init_worker(log_queue):
+    global _LOG_QUEUE
+    _LOG_QUEUE = log_queue
+
+def log_message(key: str, message: str):
+    if _LOG_QUEUE is None:
+        ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"{ts} [{key}] {message}")
+        return
+    _LOG_QUEUE.put((key, message))
+
+def log_listener(log_queue, log_path: Path):
+    with open(log_path, "a", buffering=1) as f:
+        while True:
+            record = log_queue.get()
+            if record is None:
+                break
+            key, message = record
+            ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            line = f"{ts} [{key}] {message}"
+            print(line)
+            f.write(line + "\n")
+
 def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
     """Run pbp meta-gen for a single month. Returns (key, stdout, stderr)."""
     key = month_config["key"]
+    log_message(key, "Starting meta-gen")
     try:
-        result = subprocess.run(
-            [
-                "pbp", "meta-gen",
-                f"--recorder={RECORDER}",
-                f"--json-base-dir={JSON_BASE_DIR}",
-                f"--output-dir={OUTPUT_DIR}",
-                f"--uri={URI}",
-                f"--start={month_config['start']}",
-                f"--end={month_config['end']}",
-                f"--prefix={PREFIX}",
-            ],
-            capture_output=True,
-            text=True,
-            timeout=2700
-        )
-        return (key, result.stdout, result.stderr if result.returncode != 0 else None)
-    except subprocess.TimeoutExpired:
-        return (key, None, "Timed out after 45 minutes")
+        with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".txt") as stdout_file:
+            stdout_path = stdout_file.name
+            process = subprocess.Popen(
+                [
+                    "pbp", "meta-gen",
+                    f"--recorder={RECORDER}",
+                    f"--json-base-dir={JSON_BASE_DIR}",
+                    f"--output-dir={OUTPUT_DIR}",
+                    f"--uri={URI}",
+                    f"--start={month_config['start']}",
+                    f"--end={month_config['end']}",
+                    f"--prefix={PREFIX}",
+                ],
+                stdout=stdout_file,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+
+        wait_thread = threading.Thread(target=process.wait)
+        start_time = datetime.datetime.now()
+        wait_thread.start()
+        while wait_thread.is_alive():
+            wait_thread.join(timeout=60)
+            if not wait_thread.is_alive():
+                break
+            elapsed = (datetime.datetime.now() - start_time).total_seconds()
+            log_message(key, f"Still running... ({int(elapsed // 60)}m elapsed)")
+            if elapsed > 2700:
+                process.terminate()
+                return (key, None, "Timed out after 45 minutes")
+
+        _, stderr = process.communicate()
+        returncode = process.returncode
+        if returncode != 0:
+            last_lines = ""
+            try:
+                with open(stdout_path, "r") as stdout_reader:
+                    lines = stdout_reader.readlines()
+                last_lines = "".join(lines[-50:])
+            except Exception:
+                last_lines = ""
+            if last_lines:
+                stderr = (stderr or "") + "\n--- last 50 lines of stdout ---\n" + last_lines
+            return (key, None, stderr if stderr else "")
+        return (key, None, None)
     except Exception as e:
         return (key, None, str(e))
+    finally:
+        try:
+            if "stdout_path" in locals() and stdout_path:
+                os.unlink(stdout_path)
+        except Exception:
+            log_message(key, f"Warning: failed to delete temp file {stdout_path}")
 
 def convert_month_to_ndjson(month_config: dict) -> tuple[bool, str | None]:
     """Convert a single month's PBP JSON files to NDJSON in Hive-partitioned structure."""
     year = month_config["year"]
     month = month_config["month"]
+    key = month_config["key"]
 
     input_dir = Path(JSON_BASE_DIR) / str(year)
     output_dir = Path(NDJSON_DIR) / f"year={year}" / f"month={month}"
@@ -113,50 +200,82 @@ def convert_month_to_ndjson(month_config: dict) -> tuple[bool, str | None]:
             with open(output_path, "w") as f:
                 for record in data:
                     f.write(json.dumps(record) + "\n")
-            print(f"Converted: {input_path} -> {output_path}")
+            log_message(key, f"Converted: {input_path} -> {output_path}")
         except Exception as e:
             return (False, f"Error converting {input_path}: {e}")
     return (True, None)
         
 def main():
     ensure_dirs()
+    run_ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_path = Path(LOG_DIR) / f"run_{run_ts}.log"
+    log_queue = multiprocessing.Queue()
+    init_worker(log_queue)
+    listener_thread = threading.Thread(target=log_listener, args=(log_queue, log_path))
+    listener_thread.start()
+
     status = load_status()
     pending = get_pending_months(status)
+    if pending:
+        default_key = pending[0]["key"]
+    elif status.get("failed"):
+        default_key = next(iter(status["failed"]))
+    elif status.get("completed"):
+        default_key = status["completed"][0]
+    else:
+        default_key = "0000-00"
+
+    log_message(default_key, f"Script start: {len(pending)} months pending.")
 
     if not pending:
-        print("All months already completed.")
+        log_message(default_key, "All months already completed.")
+        completed = len(status["completed"])
+        failed = len(status["failed"])
+        failed_keys = list(status["failed"].keys())
+        summary = f"Script end: {completed} succeeded, {failed} failed."
+        if failed_keys:
+            summary = f"{summary} Failed months: {failed_keys}"
+        log_message(default_key, summary)
+        log_queue.put(None)
+        listener_thread.join()
         return
-
-    print(f"{len(pending)} months remaining.")
 
     # split pending into batches of BATCH_SIZE
     batches = [pending[i:i + BATCH_SIZE] for i in range(0, len(pending), BATCH_SIZE)]
 
-    with multiprocessing.Pool(processes=BATCH_SIZE) as pool:
-        for batch in batches:
+    with multiprocessing.Pool(processes=BATCH_SIZE, initializer=init_worker, initargs=(log_queue,)) as pool:
+        for index, batch in enumerate(batches, start=1):
             batch_by_key = {month["key"]: month for month in batch}
+            batch_key = batch[0]["key"]
+            batch_keys = ", ".join(batch_by_key.keys())
+            log_message(batch_key, f"Batch {index}/{len(batches)} starting: {batch_keys}")
             results = pool.imap_unordered(run_meta_gen, batch)
             for key, stdout, stderr in results:
                 if stderr is None:
+                    log_message(key, "Meta-gen completed")
                     conversion_ok, conversion_error = convert_month_to_ndjson(batch_by_key[key])
                     if conversion_ok:
-                        print(f"{key}: success")
+                        log_message(key, "NDJSON conversion succeeded")
                         status["completed"].append(key)
                         status["failed"].pop(key, None)
                     else:
-                        print(f"{key}: failed during NDJSON conversion - {conversion_error[:200]}")
+                        log_message(key, f"NDJSON conversion failed: {conversion_error[:200]}")
                         status["failed"][key] = conversion_error
                 else:
-                    print(f"{key}: failed — {stderr[:200]}")
+                    log_message(key, f"Meta-gen failed: {stderr[:200]}")
                     status["failed"][key] = stderr
                 save_status(status)
+            log_message(batch_key, f"Batch {index}/{len(batches)} completed: results collected")
 
     completed = len(status["completed"])
     failed = len(status["failed"])
-    print(f"\nDone. {completed} succeeded, {failed} failed.")
-    if status["failed"]:
-        print("Failed months:", list(status["failed"].keys()))
+    failed_keys = list(status["failed"].keys())
+    summary = f"Script end: {completed} succeeded, {failed} failed."
+    if failed_keys:
+        summary = f"{summary} Failed months: {failed_keys}"
+    log_message(default_key, summary)
+    log_queue.put(None)
+    listener_thread.join()
 
 if __name__ == "__main__":
-    import multiprocessing
     main()
