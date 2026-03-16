@@ -40,26 +40,6 @@ def generate_month_ranges() -> list[dict]:
 
 MONTH_RANGES = generate_month_ranges()
 
-# One day range for testing
-# MONTH_RANGES = [
-#     {
-#         "key": "2019-07",
-#         "year": 2019,
-#         "month": 7,
-#         "start": "20190701",
-#         "end": "20190702",
-#     }
-# ]
-
-# multiple one day months to test meta gen running in parallel
-MONTH_RANGES = [
-    {"key": "2016-03", "year": 2016, "month": 3, "start": "20160301", "end": "20160301"},
-    {"key": "2018-06", "year": 2018, "month": 6, "start": "20180601", "end": "20180601"},
-    {"key": "2020-01", "year": 2020, "month": 1, "start": "20200101", "end": "20200101"},
-    {"key": "2022-09", "year": 2022, "month": 9, "start": "20220901", "end": "20220901"},
-    {"key": "2025-12", "year": 2025, "month": 12, "start": "20251201", "end": "20251201"},
-]
-
 # in months
 BATCH_SIZE = 10
 
