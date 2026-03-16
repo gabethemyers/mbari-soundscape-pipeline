@@ -125,8 +125,14 @@ ndjson/
         └── 20190602.ndjson
 ```
 
-Upload the contents of `ndjson/` to `s3://mbari-soundscape-metadata/` preserving this structure. Athena will discover partitions via `MSCK REPAIR TABLE`.
+---
 
+## S3 Upload
+ 
+After each month's NDJSON conversion succeeds, the script automatically uploads that month's partition to `s3://mbari-soundscape-metadata/` preserving the Hive structure. Upload success is required for a month to be marked complete in `status.json`. If an upload fails, the NDJSON files remain locally and the month is marked failed and retried from the beginning on the next run
+ 
+AWS credentials must be configured locally at `~/.aws/credentials` before running. The script verifies credentials are accessible on startup and exits cleanly if they are not.
+ 
 ---
 
 ## Design Decisions

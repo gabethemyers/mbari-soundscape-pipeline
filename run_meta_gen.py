@@ -8,6 +8,7 @@ import datetime
 import multiprocessing
 import threading
 import tempfile
+import boto3
 
 # --- Configuration ---
 
@@ -19,6 +20,7 @@ LOG_DIR = "logs"
 URI = "s3://pacific-sound-256khz"
 PREFIX = "MARS_"
 RECORDER = "ICLISTEN"
+S3_BUCKET = "mbari-soundscape-metadata"
 
 
 def generate_month_ranges() -> list[dict]:
@@ -39,6 +41,15 @@ def generate_month_ranges() -> list[dict]:
     return ranges
 
 MONTH_RANGES = generate_month_ranges()
+MONTH_RANGES = [
+    {
+        "key": "2019-07",
+        "year": 2019,
+        "month": 7,
+        "start": "20190701",
+        "end": "20190701",
+    }
+]
 
 # in months
 BATCH_SIZE = 10
@@ -184,6 +195,28 @@ def convert_month_to_ndjson(month_config: dict) -> tuple[bool, str | None]:
         except Exception as e:
             return (False, f"Error converting {input_path}: {e}")
     return (True, None)
+
+def upload_month_to_s3(month_config: dict, s3_client) -> tuple[bool, str | None]:
+    year = month_config["year"]
+    month = month_config["month"]
+
+    local_dir = Path(NDJSON_DIR) / f"year={year}" / f"month={month}"
+    if not local_dir.exists():
+        return (False, f"NDJSON directory not found: {local_dir}")
+
+    files = [path for path in local_dir.rglob("*") if path.is_file()]
+    if not files:
+        return (False, f"No NDJSON files found in {local_dir}")
+
+    s3_prefix = f"year={year}/month={month}"
+    for local_path in files:
+        relative_path = local_path.relative_to(local_dir).as_posix()
+        s3_key = f"{s3_prefix}/{relative_path}"
+        try:
+            s3_client.upload_file(str(local_path), S3_BUCKET, s3_key)
+        except Exception as e:
+            return (False, f"Error uploading {local_path}: {e}")
+    return (True, None)
         
 def main():
     ensure_dirs()
@@ -220,6 +253,15 @@ def main():
         listener_thread.join()
         return
 
+    try:
+        s3_client = boto3.client("s3")
+        s3_client.list_buckets()
+    except Exception as e:
+        log_message(default_key, f"AWS credentials check failed: {e}")
+        log_queue.put(None)
+        listener_thread.join()
+        return
+
     # split pending into batches of BATCH_SIZE
     batches = [pending[i:i + BATCH_SIZE] for i in range(0, len(pending), BATCH_SIZE)]
 
@@ -236,8 +278,15 @@ def main():
                     conversion_ok, conversion_error = convert_month_to_ndjson(batch_by_key[key])
                     if conversion_ok:
                         log_message(key, "NDJSON conversion succeeded")
-                        status["completed"].append(key)
-                        status["failed"].pop(key, None)
+                        log_message(key, "Uploading to S3...")
+                        upload_ok, upload_error = upload_month_to_s3(batch_by_key[key], s3_client)
+                        if upload_ok:
+                            log_message(key, "S3 upload succeeded")
+                            status["completed"].append(key)
+                            status["failed"].pop(key, None)
+                        else:
+                            log_message(key, f"S3 upload failed: {upload_error}")
+                            status["failed"][key] = upload_error
                     else:
                         log_message(key, f"NDJSON conversion failed: {conversion_error[:200]}")
                         status["failed"][key] = conversion_error
