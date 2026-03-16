@@ -41,15 +41,6 @@ def generate_month_ranges() -> list[dict]:
     return ranges
 
 MONTH_RANGES = generate_month_ranges()
-MONTH_RANGES = [
-    {
-        "key": "2019-07",
-        "year": 2019,
-        "month": 7,
-        "start": "20190701",
-        "end": "20190701",
-    }
-]
 
 # in months
 BATCH_SIZE = 10
