@@ -17,6 +17,7 @@ JSON_BASE_DIR = "json/iclisten"
 OUTPUT_DIR = "output"
 NDJSON_DIR = "ndjson"
 LOG_DIR = "logs"
+GAPS_LOG_FILE = "gaps.log"
 URI = "s3://pacific-sound-256khz"
 PREFIX = "MARS_"
 RECORDER = "ICLISTEN"
@@ -97,6 +98,22 @@ def log_listener(log_queue, log_path: Path):
             print(line)
             f.write(line + "\n")
 
+def append_gap_log(key: str):
+    with open(GAPS_LOG_FILE, "a") as f:
+        f.write(f"{key}: no data detected\n")
+
+def log_gap_if_no_data(key: str, stderr_path: str, fallback_stderr: str | None = None) -> str:
+    try:
+        with open(stderr_path, "r") as stderr_reader:
+            stderr_text = stderr_reader.read()
+    except Exception:
+        stderr_text = fallback_stderr or ""
+
+    if "no data" in stderr_text.lower():
+        append_gap_log(key)
+
+    return stderr_text
+
 def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
     """Run pbp meta-gen for a single month. Returns (key, stdout, stderr)."""
     key = month_config["key"]
@@ -146,9 +163,13 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
             )
             if elapsed > 5400:
                 process.terminate()
+                log_gap_if_no_data(key, stderr_path)
                 return (key, None, "Timed out after 90 minutes")
 
         _, stderr = process.communicate()
+        stderr_text = log_gap_if_no_data(key, stderr_path, stderr)
+        no_data_detected = "no data" in stderr_text.lower()
+
         returncode = process.returncode
         if returncode != 0:
             last_lines = ""
@@ -161,6 +182,8 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
             if last_lines:
                 stderr = (stderr or "") + "\n--- last 50 lines of stderr ---\n" + last_lines
             return (key, None, stderr if stderr else "")
+        if no_data_detected:
+            return (key, None, "no data detected")
         return (key, None, None)
     except Exception as e:
         return (key, None, str(e))
