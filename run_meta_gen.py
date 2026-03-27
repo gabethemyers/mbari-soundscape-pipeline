@@ -167,8 +167,7 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
                 return (key, None, "Timed out after 90 minutes")
 
         _, stderr = process.communicate()
-        stderr_text = log_gap_if_no_data(key, stderr_path, stderr)
-        no_data_detected = "no data" in stderr_text.lower()
+        log_gap_if_no_data(key, stderr_path, stderr)
 
         returncode = process.returncode
         if returncode != 0:
@@ -182,8 +181,6 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
             if last_lines:
                 stderr = (stderr or "") + "\n--- last 50 lines of stderr ---\n" + last_lines
             return (key, None, stderr if stderr else "")
-        if no_data_detected:
-            return (key, None, "no data detected")
         return (key, None, None)
     except Exception as e:
         return (key, None, str(e))
