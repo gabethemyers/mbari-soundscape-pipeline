@@ -43,7 +43,7 @@ def generate_month_ranges() -> list[dict]:
 MONTH_RANGES = generate_month_ranges()
 
 # in months
-BATCH_SIZE = 10
+BATCH_SIZE = 8
 
 # --- Status File ---
 
@@ -102,8 +102,8 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
     key = month_config["key"]
     log_message(key, "Starting meta-gen")
     try:
-        with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".txt") as stdout_file:
-            stdout_path = stdout_file.name
+        with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".txt") as stderr_file:
+            stderr_path = stderr_file.name
             process = subprocess.Popen(
                 [
                     "pbp", "meta-gen",
@@ -115,8 +115,8 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
                     f"--end={month_config['end']}",
                     f"--prefix={PREFIX}",
                 ],
-                stdout=stdout_file,
-                stderr=subprocess.PIPE,
+                stdout=subprocess.DEVNULL,
+                stderr=stderr_file,
                 text=True,
             )
 
@@ -128,33 +128,48 @@ def run_meta_gen(month_config: dict) -> tuple[str, str | None, str | None]:
             if not wait_thread.is_alive():
                 break
             elapsed = (datetime.datetime.now() - start_time).total_seconds()
-            log_message(key, f"Still running... ({int(elapsed // 60)}m elapsed)")
-            if elapsed > 2700:
+            tail_lines = []
+            try:
+                with open(stderr_path, "r") as stdout_reader:
+                    for line in reversed(stdout_reader.readlines()):
+                        if line.strip():
+                            tail_lines.append(line.strip())
+                            if len(tail_lines) == 2:
+                                break
+                tail_lines.reverse()
+            except Exception:
+                tail_lines = []
+            tail_text = f" Last stderr: {' | '.join(tail_lines)}" if tail_lines else ""
+            log_message(
+                key,
+                f"Still running... ({int(elapsed // 60)}m elapsed){tail_text}",
+            )
+            if elapsed > 5400:
                 process.terminate()
-                return (key, None, "Timed out after 45 minutes")
+                return (key, None, "Timed out after 90 minutes")
 
         _, stderr = process.communicate()
         returncode = process.returncode
         if returncode != 0:
             last_lines = ""
             try:
-                with open(stdout_path, "r") as stdout_reader:
+                with open(stderr_path, "r") as stdout_reader:
                     lines = stdout_reader.readlines()
                 last_lines = "".join(lines[-50:])
             except Exception:
                 last_lines = ""
             if last_lines:
-                stderr = (stderr or "") + "\n--- last 50 lines of stdout ---\n" + last_lines
+                stderr = (stderr or "") + "\n--- last 50 lines of stderr ---\n" + last_lines
             return (key, None, stderr if stderr else "")
         return (key, None, None)
     except Exception as e:
         return (key, None, str(e))
     finally:
         try:
-            if "stdout_path" in locals() and stdout_path:
-                os.unlink(stdout_path)
+            if "stderr_path" in locals() and stderr_path:
+                os.unlink(stderr_path)
         except Exception:
-            log_message(key, f"Warning: failed to delete temp file {stdout_path}")
+            log_message(key, f"Warning: failed to delete temp file {stderr_path}")
 
 def convert_month_to_ndjson(month_config: dict) -> tuple[bool, str | None]:
     """Convert a single month's PBP JSON files to NDJSON in Hive-partitioned structure."""
