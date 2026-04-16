@@ -30,12 +30,51 @@ pip install -r requirements.txt
 
 ```
 run_meta_gen.py        # main script
+compare_s3_bucket_counts.py  # yearly source-vs-metadata comparison utility
 status.json            # auto-generated; tracks completed and failed months
 json/iclisten/         # PBP output, organized by year
 output/                # PBP logs
 ndjson/                # converted output in Hive-partitioned structure
 logs/                  # timestamped log file per run
 ```
+
+---
+
+## Comparison Script
+
+`compare_s3_bucket_counts.py` compares yearly source-audio counts from the public `pacific-sound-256khz-{year}` buckets against yearly metadata coverage in Athena.
+
+### What it counts
+
+- **Source Audio Files (Valid)** are counted from S3 by listing each yearly bucket and including only `.wav` objects that are at least 50 MB.
+- Files smaller than 50 MB are excluded because the January 2020 hydrophone malfunction produced thousands of short hardware-induced fragments that are intentionally ignored by the metadata pipeline.
+- **Athena Metadata Records** are counted with `COUNT(DISTINCT uri)` so overlapping metadata rows do not inflate the expected coverage.
+- **Diff** is calculated as `Athena Metadata Records - Source Audio Files (Valid)`.
+
+### Requirements
+
+- AWS credentials with permission to list the yearly source buckets and run Athena queries.
+- Correct Athena settings in `compare_s3_bucket_counts.py`:
+  - `ATHENA_DATABASE`
+  - `ATHENA_TABLE`
+  - `ATHENA_RESULTS_BUCKET`
+
+### Running
+
+```bash
+python compare_s3_bucket_counts.py
+```
+
+The script queries Athena once per year from 2015 through 2026 and prints a table like:
+
+```text
+Year  Source Audio Files (Valid)  Athena Metadata Records   Diff
+----  --------------------------  -----------------------  -----
+2015                       12345                    12340    -5
+...
+```
+
+The footer also prints totals and repeats that the source-side count excludes fragmented `.wav` files smaller than 50 MB.
 
 ---
 
