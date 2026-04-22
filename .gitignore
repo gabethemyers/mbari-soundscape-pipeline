@@ -6,3 +6,9 @@ status.json
 venv/
 __pycache__/
 convert_to_ndjson.py
+.codex
+athena_2020.txt
+athena_2020_clean.txt
+missing_2020_wavs.txt
+s3_2020.txt
+total_metadata_records_by_year.csv
