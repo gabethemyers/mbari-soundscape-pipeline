@@ -22,16 +22,20 @@ URI = "s3://pacific-sound-256khz"
 PREFIX = "MARS_"
 RECORDER = "ICLISTEN"
 S3_BUCKET = "mbari-soundscape-metadata"
+START_YEAR = 2015
+START_MONTH = 7
+END_YEAR = 2026
+END_MONTH = 3
 
 
 def generate_month_ranges() -> list[dict]:
     ranges = []
-    for year in range(2015, 2027):
-        start_month = 7 if year == 2015 else 1
-        end_month = 3 if year == 2026 else 12
+    for year in range(START_YEAR, END_YEAR + 1):
+        start_month = START_MONTH if year == START_YEAR else 1
+        end_month = END_MONTH if year == END_YEAR else 12
         for month in range(start_month, end_month + 1):
             last_day = calendar.monthrange(year, month)[1]
-            start_day = 28 if year == 2015 and month == 7 else 1
+            start_day = 28 if year == START_YEAR and month == START_MONTH else 1
             ranges.append({
                 "key": f"{year}-{month:02d}",
                 "year": year,
