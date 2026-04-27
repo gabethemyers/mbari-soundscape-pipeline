@@ -5,7 +5,6 @@ logs/
 status.json
 venv/
 __pycache__/
-convert_to_ndjson.py
 .codex
 athena_2020.txt
 athena_2020_clean.txt
