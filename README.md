@@ -1,6 +1,39 @@
 # MBARI Soundscape Metadata Pipeline
 
-This repository generates and validates metadata for MBARI's MARS hydrophone audio. The pipeline uses [PBP](https://docs.mbari.org/pbp/) to produce JSON, converts that output to NDJSON, and uploads partitioned results to S3 for Athena querying.
+This pipeline processes passive acoustic monitoring data from MBARI's MARS hydrophone:
+a cabled deep-sea observatory recording continuous broadband audio off the Monterey Bay 
+coast. The source dataset, [MBARI Pacific Sound](https://registry.opendata.aws/pacific-sound/), 
+has been recorded nearly continuously since July 2015 at 256 kHz resolution and is 
+publicly available through the AWS Open Data Registry. This pipeline uses 
+[PBP](https://docs.mbari.org/pbp/) to extract hourly soundscape metrics, converts the 
+output to Hive-partitioned NDJSON, and uploads results to S3 for large-scale querying 
+via AWS Athena. Both a monthly batch pipeline and a daily incremental flow are supported, 
+with gap detection and upload validation built in.
+
+
+## Pipeline Overview
+
+```mermaid
+flowchart LR
+    A[MARS Hydrophone - Raw Audio on S3] --> B[PBP - Metadata Extraction]
+    B --> C[JSON Output]
+    C --> D[NDJSON Conversion - Hive Partitioned]
+    D --> E[S3 Upload]
+    E --> F[AWS Athena - Queryable Metadata]
+```
+
+## Pipeline Modes
+
+```mermaid
+flowchart TD
+    A[Monthly Batch - run_meta_gen.py] --> B[Backfill 10+ years of historical audio]
+    B --> C[Iterates over date range with status.json tracking]
+
+    D[Daily Incremental - daily_metadata.py] --> E[Runs once daily for new uploads]
+
+    C --> F[PBP Extraction + NDJSON Conversion + S3 Upload]
+    E --> F
+```
 
 ## What Lives Here
 
@@ -22,7 +55,7 @@ Each script has its own doc in `docs/`:
 ## Requirements
 
 - Python 3.11
-- AWS credentials configured for the scripts that talk to S3 or Athena
+- AWS credentials with S3 read/write and Athena query execution permissions
 - `mbari-pbp` installed from `requirements.txt`
 
 ## Setup
@@ -41,6 +74,14 @@ pip install -r requirements.txt
 - `logs/` — pipeline logs
 - `status.json` — progress tracker for the monthly pipeline
 
+## Contributions
+
+Identified a silent-halt bug in `pbp meta-gen` triggered by missing source files
+  in non-contiguous date ranges, affecting a significant portion of the historical
+  archive. Reported as [issue #116](https://github.com/mbari-org/pbp/issues/116);
+  the fix was implemented by mentor Danelle Cline, validated through pipeline testing
+  on this project, and merged into PBP main via [PR #117](https://github.com/mbari-org/pbp/pull/117).
+
 ## Common Commands
 
 ```bash
@@ -49,3 +90,7 @@ python compare_s3_bucket_counts.py
 python convert_to_ndjson.py <input_dir> <output_dir>
 python daily_metadata/daily_metadata.py --date 2025-04-05
 ```
+
+## Acknowledgments
+
+Developed as part of a collaboration between CSUMB and MBARI under mentor Danelle Cline.

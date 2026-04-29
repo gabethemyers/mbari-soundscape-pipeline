@@ -32,3 +32,33 @@ If `--date` is omitted, the script uses yesterday's date.
 - Invalid dates exit immediately with an error.
 - `pbp meta-gen` failures stop the script with a non-zero exit code.
 - Conversion or upload failures are logged and reported.
+
+# Daily Metadata Cron Job setup
+
+- **Instance:** EC2 Amazon Linux
+- **Name:** Soundscape MetaData Generation
+- **ID**: `i-04e435bf75cbe76bb`
+- **Type**: c6g.2xlarge
+
+
+
+## Fix: Hardcoded `pbp` Path in Script
+ 
+Cron runs with a minimal PATH and couldn't find the `pbp` binary. Changed the `cmd` list in `daily_metadata.py` from:
+```python
+cmd = ["pbp", "meta-gen", ...]
+```
+ 
+To the full path:
+```python
+cmd = ["/home/ec2-user/mbari_open_soundscape_query/venv/bin/pbp", "meta-gen", ...]
+```
+ 
+ ## Cron Setup
+
+Added the cron job via `crontab -e`:
+```
+0 16 * * * cd /home/ec2-user/mbari_open_soundscape_query/daily_metadata && /home/ec2-user/mbari_open_soundscape_query/venv/bin/python daily_metadata.py >> /home/ec2-user/mbari_open_soundscape_query/logs/daily_metadata.log 2>&1
+```
+Runs daily_metadata.py every day at 8am PST (4pm UTC).  
+
