@@ -202,7 +202,7 @@ def convert_month_to_ndjson(month_config: dict) -> tuple[bool, str | None]:
     key = month_config["key"]
 
     input_dir = Path(JSON_BASE_DIR) / str(year)
-    output_dir = Path(NDJSON_DIR) / f"year={year}" / f"month={month}"
+    output_dir = Path(NDJSON_DIR) / f"year={year}" / f"month={month:02d}"
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -230,7 +230,7 @@ def upload_month_to_s3(month_config: dict, s3_client) -> tuple[bool, str | None]
     year = month_config["year"]
     month = month_config["month"]
 
-    local_dir = Path(NDJSON_DIR) / f"year={year}" / f"month={month}"
+    local_dir = Path(NDJSON_DIR) / f"year={year}" / f"month={month:02d}"
     if not local_dir.exists():
         return (False, f"NDJSON directory not found: {local_dir}")
 
