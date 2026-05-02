@@ -27,7 +27,27 @@ python compare_s3_bucket_counts.py
 
 The script prints one row per year from 2015 through 2026, then prints totals and a note that fragmented `.wav` files under 50 MB are excluded from the source count.
 
-TODO: add actual output example
+```
+Year  Source Audio Files (Valid)  Athena Metadata Records  Diff
+----  --------------------------  -----------------------  ----
+2015                       20836                    20966  +130
+2016                       48330                    48480  +150
+2017                       51955                    51965   +10
+2018                       50383                    50388    +5
+2019                       50645                    50651    +6
+2020                       50602                    50649   +47
+2021                       50279                    50282    +3
+2022                       50596                    50603    +7
+2023                       49869                    49909   +40
+2024                       36644                    36650    +6
+2025                       36192                    36182   -10
+2026                       16709                    16649   -60
+
+Source Audio Files (Valid) exclude fragmented .wav files smaller than 50 MB.
+Total source audio files (valid, non-fragmented): 513040
+Total Athena metadata records: 513374
+Total diff: +334
+```
 
 ## Failure Behavior
 

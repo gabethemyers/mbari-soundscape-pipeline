@@ -10,6 +10,72 @@ output to Hive-partitioned NDJSON, and uploads results to S3 for large-scale que
 via AWS Athena. Both a monthly batch pipeline and a daily incremental flow are supported, 
 with gap detection and upload validation built in.
 
+## Quick Demo
+
+### 1. Install dependencies
+
+```bash
+python3.11 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+aws configure
+```
+
+`aws configure` sets up your AWS credentials so `boto3` can access S3 and Athena.
+
+### 2. Run the monthly batch pipeline
+
+```bash
+python run_meta_gen.py
+```
+
+Processes all months in `MONTH_RANGES` (default: the full historical archive). Runs 8
+months in parallel. Each month takes ~20 minutes on EC2 (~40 minutes on local hardware),
+so a full backfill of ~10 years completes in a few hours with the parallelism. Progress
+is tracked in `status.json` — interrupted runs resume where they left off.
+
+### 3. Run a single-day incremental update
+
+```bash
+python daily_metadata/daily_metadata.py --date 2025-04-05
+```
+
+Processes one day's audio through PBP, converts to NDJSON, and uploads. Completes in
+under a minute. If `--date` is omitted, the script processes yesterday's date.
+
+### 4. Validate metadata coverage
+
+```bash
+python compare_s3_bucket_counts.py
+```
+
+Compares source audio file counts against Athena metadata records year by year. Expected
+output looks like:
+
+```
+Year  Source Audio Files (Valid)  Athena Metadata Records  Diff
+----  --------------------------  -----------------------  ----
+2015                       20836                    20966  +130
+2016                       48330                    48480  +150
+2017                       51955                    51965   +10
+2018                       50383                    50388    +5
+2019                       50645                    50651    +6
+2020                       50602                    50649   +47
+2021                       50279                    50282    +3
+2022                       50596                    50603    +7
+2023                       49869                    49909   +40
+2024                       36644                    36650    +6
+2025                       36192                    36182   -10
+2026                       16709                    16649   -60
+
+Source Audio Files (Valid) exclude fragmented .wav files smaller than 50 MB.
+Total source audio files (valid, non-fragmented): 513040
+Total Athena metadata records: 513374
+Total diff: +334
+```
+
+A near-zero diff indicates complete coverage. The small positive diff is expected and
+attributable to fragmented audio files below the 50 MB validity threshold and a handful
+of processing edge cases — the pipeline achieves **99.94% coverage**.
 
 ## Pipeline Overview
 
@@ -58,21 +124,15 @@ Each script has its own doc in `docs/`:
 - AWS credentials with S3 read/write and Athena query execution permissions
 - `mbari-pbp` installed from `requirements.txt`
 
-## Setup
-
-```bash
-python3.11 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
 ## Output Layout
 
 - `json/iclisten/` — PBP JSON output
-- `ndjson/` — Hive-partitioned NDJSON output
-- `output/` — PBP logs
-- `logs/` — pipeline logs
+- `ndjson/` — hive-partitioned NDJSON output
+- `output/` — monthly PBP logs (created by PBP)
+- `logs/` — pipeline run logs including `daily_metadata.log`
 - `status.json` — progress tracker for the monthly pipeline
+- `daily_metadata/json/` — daily PBP JSON output
+- `daily_metadata/logs/` — daily PBP logs (created by PBP)
 
 ## Contributions
 
@@ -81,15 +141,6 @@ Identified a silent-halt bug in `pbp meta-gen` triggered by missing source files
   archive. Reported as [issue #116](https://github.com/mbari-org/pbp/issues/116);
   the fix was implemented by mentor Danelle Cline, validated through pipeline testing
   on this project, and merged into PBP main via [PR #117](https://github.com/mbari-org/pbp/pull/117).
-
-## Common Commands
-
-```bash
-python run_meta_gen.py
-python compare_s3_bucket_counts.py
-python convert_to_ndjson.py <input_dir> <output_dir>
-python daily_metadata/daily_metadata.py --date 2025-04-05
-```
 
 ## Acknowledgments
 
