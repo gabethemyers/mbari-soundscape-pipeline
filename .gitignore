@@ -5,3 +5,5 @@ logs/
 status.json
 venv/
 __pycache__/
+mbari_soundscape_metadata.egg-info/
+

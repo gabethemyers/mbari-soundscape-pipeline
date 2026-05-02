@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mbari-soundscape-metadata"
+version = "0.1.0"
+description = "MBARI Soundscape Metadata Pipeline — processes passive acoustic monitoring data from MARS hydrophone, extracts hourly metrics, and uploads to S3/Athena"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "Gabe", email = "gabe@mbari.org" },
+]
+
+dependencies = [
+    "boto3>=1.42",
+    "dask>=2023.12",
+    "google-cloud-storage>=2.18",
+    "h5netcdf>=1.3",
+    "h5py>=3.16",
+    "lifewatch-pypam>=0.3",
+    "loguru>=0.7",
+    "mbari-pbp>=1.8",
+    "netCDF4>=1.7",
+    "noisereduce>=2.0",
+    "numpy>=1.24",
+    "pandas>=2.3",
+    "pillow>=12.0",
+    "pvlib>=0.11",
+    "pyhydrophone>=0.1",
+    "pyyaml>=6.0",
+    "requests>=2.32",
+    "scikit-image>=0.24",
+    "scikit-learn>=1.8",
+    "scikit-maad>=1.5",
+    "scipy>=1.10",
+    "soundfile>=0.12",
+    "tqdm>=4.67",
+    "xarray>=2023.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4",
+    "syrupy>=4.9",
+]
+
+[tool.setuptools.packages.find]
+include = ["daily_metadata*"]
+exclude = ["json", "logs", "output", "ndjson", "__pycache__*"]

@@ -16,7 +16,7 @@ with gap detection and upload validation built in.
 
 ```bash
 python3.11 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
+pip install -e .  # or: pip install -r requirements.txt
 aws configure
 ```
 
@@ -42,7 +42,7 @@ python daily_metadata/daily_metadata.py --date 2025-04-05
 Processes one day's audio through PBP, converts to NDJSON, and uploads. Completes in
 under a minute. If `--date` is omitted, the script processes yesterday's date.
 
-### 4. Validate metadata coverage
+### 3.5. Validate metadata coverage
 
 ```bash
 python compare_s3_bucket_counts.py
@@ -107,6 +107,7 @@ flowchart TD
 - `compare_s3_bucket_counts.py` — yearly source-vs-metadata comparison against Athena.
 - `convert_to_ndjson.py` — standalone JSON array to NDJSON converter.
 - `daily_metadata/daily_metadata.py` — daily metadata generation and upload flow.
+- `pyproject.toml` — project metadata and dependencies (see [docs/pyproject.md](docs/pyproject.md)).
 
 ## Documentation
 
@@ -122,7 +123,7 @@ Each script has its own doc in `docs/`:
 
 - Python 3.11
 - AWS credentials with S3 read/write and Athena query execution permissions
-- `mbari-pbp` installed from `requirements.txt`
+- `mbari-pbp` installed via `pip install -e .` or `pip install -r requirements.txt`
 
 ## Output Layout
 

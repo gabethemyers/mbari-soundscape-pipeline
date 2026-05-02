@@ -8,3 +8,5 @@ This folder contains the script-specific docs for the repository.
 - `compare_s3_bucket_counts.md` — yearly source vs Athena comparison
 - `convert_to_ndjson.md` — standalone NDJSON converter
 - `daily_metadata.md` — daily metadata flow
+- `pyproject.md` — project configuration
+  
