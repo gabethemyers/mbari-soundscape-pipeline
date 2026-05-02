@@ -1,4 +1,4 @@
-# `daily_metadata.py`
+# `daily_metadata`
 
 Generates metadata for a single day, converts it to NDJSON, and uploads the result to S3.
 
@@ -11,8 +11,16 @@ Generates metadata for a single day, converts it to NDJSON, and uploads the resu
 
 ## Run
 
+### CLI
+
 ```bash
-python daily_metadata/daily_metadata.py --date 2025-04-05
+daily-metadata --date 2025-04-05
+```
+
+### Module invocation
+
+```bash
+python -m mbari_soundscape_pipeline.daily_metadata --date 2025-04-05
 ```
 
 If `--date` is omitted, the script uses yesterday's date.

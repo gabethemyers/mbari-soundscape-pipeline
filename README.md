@@ -27,7 +27,13 @@ aws configure
 ### 2. Run the monthly batch pipeline
 
 ```bash
-python run_meta_gen.py
+python -m mbari_soundscape_pipeline.run_meta_gen
+```
+
+Or use the installed CLI command:
+
+```bash
+run-meta-gen
 ```
 
 Processes all months in `MONTH_RANGES` (default: the full historical archive). Runs 8
@@ -38,16 +44,28 @@ is tracked in `status.json` — interrupted runs resume where they left off.
 ### 3. Run a single-day incremental update
 
 ```bash
-python daily_metadata/daily_metadata.py --date 2025-04-05
+python -m mbari_soundscape_pipeline.daily_metadata --date 2025-04-05
+```
+
+Or use the installed CLI command:
+
+```bash
+daily-metadata --date 2025-04-05
 ```
 
 Processes one day's audio through PBP, converts to NDJSON, and uploads. Completes in
 under a minute. If `--date` is omitted, the script processes yesterday's date.
 
-### 3.5. Validate metadata coverage
+### 4. Validate metadata coverage
 
 ```bash
-python compare_s3_bucket_counts.py
+python -m mbari_soundscape_pipeline.compare_s3_bucket_counts
+```
+
+Or use the installed CLI command:
+
+```bash
+compare-s3-bucket-counts
 ```
 
 Compares source audio file counts against Athena metadata records year by year. Expected
@@ -94,10 +112,10 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A[Monthly Batch - run_meta_gen.py] --> B[Backfill 10+ years of historical audio]
+    A[Monthly Batch - run_meta_gen] --> B[Backfill 10+ years of historical audio]
     B --> C[Iterates over date range with status.json tracking]
 
-    D[Daily Incremental - daily_metadata.py] --> E[Runs once daily for new uploads]
+    D[Daily Incremental - daily_metadata] --> E[Runs once daily for new uploads]
 
     C --> F[PBP Extraction + NDJSON Conversion + S3 Upload]
     E --> F
@@ -105,21 +123,47 @@ flowchart TD
 
 ## What Lives Here
 
-- `run_meta_gen.py` — full monthly pipeline from raw audio to NDJSON and S3 upload.
-- `compare_s3_bucket_counts.py` — yearly source-vs-metadata comparison against Athena.
-- `convert_to_ndjson.py` — standalone JSON array to NDJSON converter.
-- `daily_metadata/daily_metadata.py` — daily metadata generation and upload flow.
+- `mbari_soundscape_pipeline/` — all pipeline scripts and utilities:
+  - `run_meta_gen` — full monthly pipeline from raw audio to NDJSON and S3 upload.
+  - `compare_s3_bucket_counts` — yearly source-vs-metadata comparison against Athena.
+  - `convert_to_ndjson` — standalone JSON array to NDJSON converter.
+  - `daily_metadata` — daily metadata generation and upload flow.
 - `pyproject.toml` — project metadata and dependencies (see [docs/pyproject.md](docs/pyproject.md)).
+
+### CLI Commands
+
+After installing with `pip install -e .`, these CLI commands are available:
+
+- `convert-to-ndjson <input_dir> <output_dir>` — convert PBP JSON arrays to NDJSON.
+- `compare-s3-bucket-counts` — compare S3 source counts vs Athena metadata coverage.
+- `run-meta-gen` — run the full monthly batch pipeline.
+- `daily-metadata --date YYYY-MM-DD` — generate metadata for a single day.
 
 ## Documentation
 
 Each script has its own doc in `docs/`:
 
-- `docs/README.md`
-- `docs/run_meta_gen.md`
-- `docs/compare_s3_bucket_counts.md`
-- `docs/convert_to_ndjson.md`
-- `docs/daily_metadata.md`
+- [`docs/README.md`](docs/README.md)
+- [`docs/run_meta_gen.md`](docs/run_meta_gen.md)
+- [`docs/compare_s3_bucket_counts.md`](docs/compare_s3_bucket_counts.md)
+- [`docs/convert_to_ndjson.md`](docs/convert_to_ndjson.md)
+- [`docs/daily_metadata.md`](docs/daily_metadata.md)
+
+## Importing
+
+The package can be imported as `mbari_soundscape_pipeline`:
+
+```python
+from mbari_soundscape_pipeline.convert_to_ndjson import convert_file
+```
+
+Individual modules can also be imported directly:
+
+```python
+from mbari_soundscape_pipeline import run_meta_gen
+from mbari_soundscape_pipeline import daily_metadata
+from mbari_soundscape_pipeline import compare_s3_bucket_counts
+```
 
 ## Requirements
 
@@ -136,6 +180,14 @@ Each script has its own doc in `docs/`:
 - `status.json` — progress tracker for the monthly pipeline
 - `daily_metadata/json/` — daily PBP JSON output
 - `daily_metadata/logs/` — daily PBP logs (created by PBP)
+
+## CI
+
+Continuous integration runs on every push and pull request to `main`:
+
+- Syntax check (`py_compile`) on all project scripts
+- `pytest` (no tests yet — add to `tests/` to start using it)
+- Tested on Python 3.11
 
 ## Contributions
 

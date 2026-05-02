@@ -1,4 +1,4 @@
-# `run_meta_gen.py`
+# `run_meta_gen`
 
 Monthly metadata pipeline for the full MARS hydrophone archive.
 
@@ -18,8 +18,16 @@ Monthly metadata pipeline for the full MARS hydrophone archive.
 
 ## Run
 
+### CLI
+
 ```bash
-python run_meta_gen.py
+run-meta-gen
+```
+
+### Module invocation
+
+```bash
+python -m mbari_soundscape_pipeline.run_meta_gen
 ```
 
 ## Configuration

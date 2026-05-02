@@ -1,4 +1,4 @@
-# `compare_s3_bucket_counts.py`
+# `compare_s3_bucket_counts`
 
 Compares yearly source audio counts against Athena metadata coverage.
 
@@ -19,8 +19,16 @@ Compares yearly source audio counts against Athena metadata coverage.
 
 ## Run
 
+### CLI
+
 ```bash
-python compare_s3_bucket_counts.py
+compare-s3-bucket-counts
+```
+
+### Module invocation
+
+```bash
+python -m mbari_soundscape_pipeline.compare_s3_bucket_counts
 ```
 
 ## Output

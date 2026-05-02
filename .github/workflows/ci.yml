@@ -28,10 +28,10 @@ jobs:
 
       - name: Check syntax (py_compile)
         run: |
-          python -m py_compile run_meta_gen.py
-          python -m py_compile compare_s3_bucket_counts.py
-          python -m py_compile convert_to_ndjson.py
-          python -m py_compile daily_metadata/daily_metadata.py
+          python -m py_compile mbari_soundscape_pipeline/run_meta_gen.py
+          python -m py_compile mbari_soundscape_pipeline/compare_s3_bucket_counts.py
+          python -m py_compile mbari_soundscape_pipeline/convert_to_ndjson.py
+          python -m py_compile mbari_soundscape_pipeline/daily_metadata.py
 
       - name: Run pytest
         run: |

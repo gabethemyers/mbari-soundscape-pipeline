@@ -1,6 +1,12 @@
-# `convert_to_ndjson.py`
+# `convert_to_ndjson`
 
 Standalone utility for converting PBP JSON array files into newline-delimited JSON.
+
+Imported from:
+
+```python
+from mbari_soundscape_pipeline.convert_to_ndjson import convert_file
+```
 
 ## What It Does
 
@@ -10,14 +16,22 @@ Standalone utility for converting PBP JSON array files into newline-delimited JS
 
 ## Run
 
+### CLI
+
 ```bash
-python3 convert_to_ndjson.py <input_dir> <output_dir>
+convert-to-ndjson <input_dir> <output_dir>
+```
+
+### Module invocation
+
+```bash
+python -m mbari_soundscape_pipeline.convert_to_ndjson <input_dir> <output_dir>
 ```
 
 Example:
 
 ```bash
-python3 convert_to_ndjson.py json/iclisten converted/iclisten
+convert-to-ndjson json/iclisten converted/iclisten
 ```
 
 ## Behavior

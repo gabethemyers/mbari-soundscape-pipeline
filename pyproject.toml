@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mbari-soundscape-metadata"
+name = "mbari-soundscape-pipeline"
 version = "0.1.0"
 description = "MBARI Soundscape Metadata Pipeline — processes passive acoustic monitoring data from MARS hydrophone, extracts hourly metrics, and uploads to S3/Athena"
 readme = "README.md"
@@ -47,5 +47,11 @@ dev = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["daily_metadata*"]
-exclude = ["json", "logs", "output", "ndjson", "__pycache__*"]
+where = ["."]
+include = ["mbari_soundscape_pipeline*"]
+
+[project.scripts]
+convert-to-ndjson = "mbari_soundscape_pipeline.convert_to_ndjson:main"
+compare-s3-bucket-counts = "mbari_soundscape_pipeline.compare_s3_bucket_counts:main"
+run-meta-gen = "mbari_soundscape_pipeline.run_meta_gen:main"
+daily-metadata = "mbari_soundscape_pipeline.daily_metadata:main"

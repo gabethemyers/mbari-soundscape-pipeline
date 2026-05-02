@@ -5,10 +5,12 @@ Recursively processes all .json files in the input directory and writes
 converted files to the output directory, preserving the folder structure.
 
 Usage:
-    python3 convert_to_ndjson.py <input_dir> <output_dir>
+    python -m mbari_soundscape_pipeline.convert_to_ndjson <input_dir> <output_dir>
+    # or: convert-to-ndjson <input_dir> <output_dir>
 
 Example:
-    python3 convert_to_ndjson.py json/iclisten converted/iclisten
+    python -m mbari_soundscape_pipeline.convert_to_ndjson json/iclisten converted/iclisten
+    # or: convert-to-ndjson json/iclisten converted/iclisten
 """
 
 import json
@@ -53,9 +55,9 @@ def convert_directory(input_dir: Path, output_dir: Path) -> None:
     print(f"\nDone. Converted files written to {output_dir}")
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) != 3:
-        print("Usage: python3 convert_to_ndjson.py <input_dir> <output_dir>")
+        print("Usage: convert-to-ndjson <input_dir> <output_dir>")
         sys.exit(1)
 
     input_dir = Path(sys.argv[1])
@@ -66,3 +68,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     convert_directory(input_dir, output_dir)
+
+
+if __name__ == "__main__":
+    main()
