@@ -55,8 +55,11 @@ BATCH_SIZE = 8
 def load_status() -> dict:
     """Load status from file, or return a fresh status dict if none exists."""
     if Path(STATUS_FILE).exists():
-        with open(STATUS_FILE, "r") as f:
-            return json.load(f)
+        try:
+            with open(STATUS_FILE, "r") as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            print(f"Warning: {STATUS_FILE} is corrupted, starting fresh")
     return {"completed": [], "failed": {}}
 
 def save_status(status: dict):

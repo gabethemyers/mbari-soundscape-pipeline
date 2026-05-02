@@ -173,20 +173,18 @@ from mbari_soundscape_pipeline import compare_s3_bucket_counts
 
 ## Output Layout
 
-- `json/iclisten/` — PBP JSON output
+- `json/` — PBP JSON output (both monthly and daily pipelines)
 - `ndjson/` — hive-partitioned NDJSON output
 - `output/` — monthly PBP logs (created by PBP)
 - `logs/` — pipeline run logs including `daily_metadata.log`
 - `status.json` — progress tracker for the monthly pipeline
-- `daily_metadata/json/` — daily PBP JSON output
-- `daily_metadata/logs/` — daily PBP logs (created by PBP)
 
 ## CI
 
 Continuous integration runs on every push and pull request to `main`:
 
 - Syntax check (`py_compile`) on all project scripts
-- `pytest` (no tests yet — add to `tests/` to start using it)
+- `pytest` (1 test)
 - Tested on Python 3.11
 
 ## Contributions
