@@ -238,7 +238,7 @@ def upload_month_to_s3(month_config: dict, s3_client) -> tuple[bool, str | None]
     if not files:
         return (False, f"No NDJSON files found in {local_dir}")
 
-    s3_prefix = f"year={year}/month={month}"
+    s3_prefix = f"year={year}/month={month:02d}"
     for local_path in files:
         relative_path = local_path.relative_to(local_dir).as_posix()
         s3_key = f"{s3_prefix}/{relative_path}"
