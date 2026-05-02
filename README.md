@@ -1,5 +1,7 @@
 # MBARI Soundscape Metadata Pipeline
 
+[![CI](https://github.com/gabethemyers/mbari_open_soundscape_query/actions/workflows/ci.yml/badge.svg)](https://github.com/gabethemyers/mbari_open_soundscape_query/actions/workflows/ci.yml)
+
 This pipeline processes passive acoustic monitoring data from MBARI's MARS hydrophone:
 a cabled deep-sea observatory recording continuous broadband audio off the Monterey Bay 
 coast. The source dataset, [MBARI Pacific Sound](https://registry.opendata.aws/pacific-sound/), 
