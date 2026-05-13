@@ -8,5 +8,7 @@ This folder contains the script-specific docs for the repository.
 - [`compare_s3_bucket_counts.md`](compare_s3_bucket_counts.md) — yearly source vs Athena comparison
 - [`convert_to_ndjson.md`](convert_to_ndjson.md) — standalone NDJSON converter
 - [`daily_metadata.md`](daily_metadata.md) — daily metadata flow
+- [`aws.md`](aws.md) — AWS infrastructure overview (S3 buckets, Athena, access)
+- [`athena_queries.md`](athena_queries.md) — Athena table schema and example queries
 - [`pyproject.md`](pyproject.md) — project configuration
   

@@ -32,15 +32,64 @@ python -m mbari_soundscape_pipeline.run_meta_gen
 
 ## Configuration
 
-Key settings live near the top of the script:
+All settings are defined as module-level constants near the top of `run_meta_gen.py`.
 
-- `START_YEAR`, `START_MONTH`, `END_YEAR`, `END_MONTH` — date bounds used to generate the month list
-- `STATUS_FILE` — progress tracking file
-- `JSON_BASE_DIR` — PBP JSON output directory
-- `NDJSON_DIR` — converted output directory
-- `LOG_DIR` — run logs
-- `S3_BUCKET` — upload destination
-- `BATCH_SIZE` — number of months processed in parallel
+### Date Range
+
+| Setting | Value | Description |
+|---|---|---|
+| `START_YEAR` | `2015` | First year to process |
+| `START_MONTH` | `7` | Starting month (July) — only applies to `START_YEAR`; subsequent years begin in January |
+| `END_YEAR` | `2026` | Last year to process |
+| `END_MONTH` | `3` | Ending month (March) — only applies to `END_YEAR`; earlier years run through December |
+
+The configured range covers 2015-07 through 2026-03 (131 months).
+
+### Directories
+
+| Setting | Value | Description |
+|---|---|---|
+| `STATUS_FILE` | `"status.json"` | Progress tracking file (root of repo) |
+| `JSON_BASE_DIR` | `"json/iclisten"` | PBP JSON output base directory |
+| `OUTPUT_DIR` | `"output"` | PBP output directory (logs, etc.) |
+| `NDJSON_DIR` | `"ndjson"` | Converted NDJSON output directory (Hive-partitioned) |
+| `LOG_DIR` | `"logs"` | Run log directory (timestamped per run) |
+| `GAPS_LOG_FILE` | `"gaps.log"` | Gap detection log — written when `pbp meta-gen` detects no data for a month |
+
+### AWS / S3
+
+| Setting | Value | Description |
+|---|---|---|
+| `URI` | `"s3://pacific-sound-256khz"` | Source audio bucket URI |
+| `S3_BUCKET` | `"mbari-soundscape-metadata"` | Destination bucket for NDJSON uploads |
+
+### PBP Parameters
+
+These are the `pbp meta-gen` arguments passed via the script, referencing the config constants they map to:
+
+| Argument | Config Constant | Value | Description |
+|---|---|---|---|
+| `--recorder` | `RECORDER` | `ICLISTEN` | Audio instrument type |
+| `--json-base-dir` | `JSON_BASE_DIR` | `json/iclisten` | Base directory for JSON metadata output |
+| `--output-dir` | `OUTPUT_DIR` | `output` | Directory for PBP logs |
+| `--uri` | `URI` | `s3://pacific-sound-256khz` | Source audio location (S3) |
+| `--start` | `month_config['start']` | (dynamic) | Start date in `YYYYMMDD` format — generated per month range |
+| `--end` | `month_config['end']` | (dynamic) | End date in `YYYYMMDD` format — generated per month range |
+| `--prefix` | `PREFIX` | `MARS_` | S3 key prefix for source audio files |
+
+### Operational
+
+| Setting | Value | Description |
+|---|---|---|
+| `BATCH_SIZE` | `8` | Number of months processed in parallel (multiprocessing pool size) |
+
+### Day-of-Month Logic
+
+For `START_YEAR` / `START_MONTH` (2015-07), the start day is set to **28** (not 1). This aligns with the first available data in the source archive. All other months start on day 1.
+
+### Timeout
+
+Each `pbp meta-gen` invocation is monitored for a **90-minute** timeout (5400 seconds). If a month exceeds this, the process is terminated and the month is marked as failed (with a gap log entry if "no data" was detected in stderr).
 
 ## Validation
 

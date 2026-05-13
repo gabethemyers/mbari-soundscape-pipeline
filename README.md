@@ -141,13 +141,9 @@ After installing with `pip install -e .`, these CLI commands are available:
 
 ## Documentation
 
-Each script has its own doc in `docs/`:
+Each script has its own doc in `docs/`. See [`docs/README.md`](docs/README.md) for the full list.
 
-- [`docs/README.md`](docs/README.md)
-- [`docs/run_meta_gen.md`](docs/run_meta_gen.md)
-- [`docs/compare_s3_bucket_counts.md`](docs/compare_s3_bucket_counts.md)
-- [`docs/convert_to_ndjson.md`](docs/convert_to_ndjson.md)
-- [`docs/daily_metadata.md`](docs/daily_metadata.md)
+AWS infrastructure (S3 buckets, Athena, access) is documented in [`docs/aws.md`](docs/aws.md).
 
 ## Importing
 
