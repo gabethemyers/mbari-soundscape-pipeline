@@ -3,7 +3,10 @@ output/
 ndjson/
 logs/
 status.json
+gaps.log
+.venv/
 venv/
+.pytest_cache/
 __pycache__/
 mbari_soundscape_pipeline.egg-info/
 

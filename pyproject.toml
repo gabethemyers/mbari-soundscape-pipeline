@@ -10,7 +10,8 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
 authors = [
-    { name = "Gabe", email = "gabe@mbari.org" },
+    { name = "Gabriel Myers", email = "gabethemyers@gmail.com" },
+    { name = "Danelle Cline", email = "dcline@mbari.org" },
 ]
 
 dependencies = [
