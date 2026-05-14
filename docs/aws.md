@@ -106,7 +106,7 @@ cmd = [
 
 ```bash
 # View today's log
-tail -f /home/ec2-user/mbari_open_soundscape_query/logs/daily_metadata.log
+tail -50 /home/ec2-user/mbari_open_soundscape_query/logs/daily_metadata.log
 
 # Check recent cron runs
 crontab -l
