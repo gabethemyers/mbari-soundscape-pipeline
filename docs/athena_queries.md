@@ -15,6 +15,26 @@ This document covers querying the `soundscape_metadata` table in AWS Athena.
 
 **Database:** `mbari_soundscape`
 
+## Table Maintenance
+
+### Register partitions from S3
+
+```sql
+MSCK REPAIR TABLE mbari_soundscape.soundscape_metadata;
+```
+
+Scans the S3 directory and adds any missing partitions. Useful for a one-time setup or after bulk data loads.
+
+### Add a new partition (required monthly)
+
+```sql
+ALTER TABLE mbari_soundscape.soundscape_metadata
+ADD PARTITION (year='2026', month='05')
+LOCATION 's3://mbari-soundscape-metadata/year=2026/month=05/';
+```
+
+**This must be run every month** after new NDJSON data is uploaded to S3. Without it, Athena will not see the new partition and queries will return incomplete results.
+
 ## Basic Queries
 
 ### Total records by year
@@ -180,9 +200,7 @@ WHERE duration_secs < 60 OR duration_secs > 3700
 LIMIT 100;
 ```
 
-## DDL & Maintenance
-
-### Create the table (for reference)
+## DDL Reference
 
 ```sql
 CREATE EXTERNAL TABLE soundscape_metadata (
@@ -191,15 +209,10 @@ CREATE EXTERNAL TABLE soundscape_metadata (
   `end` STRING,
   duration_secs INT
 )
-ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerde'
+PARTITIONED BY (year STRING, month STRING)
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
 LOCATION 's3://mbari-soundscape-metadata/'
 TBLPROPERTIES ('ignore.malformed.json' = 'true');
-```
-
-### Repair table partitions
-
-```sql
-MSCK REPAIR TABLE mbari_soundscape.soundscape_metadata;
 ```
 
 ## Notes

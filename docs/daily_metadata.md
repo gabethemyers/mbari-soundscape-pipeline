@@ -37,36 +37,27 @@ If `--date` is omitted, the script uses yesterday's date.
 
 ## Failure Behavior
 
-- Invalid dates exit immediately with an error.
-- `pbp meta-gen` failures stop the script with a non-zero exit code.
-- Conversion or upload failures are logged and reported.
+### Within a run
 
-# Daily Metadata Cron Job setup
+- Invalid dates → exit immediately with an error.
+- `pbp meta-gen` failures → exit with non-zero code (cron logs the failure).
+- AWS credential failures → exit with non-zero code (cron logs the failure).
+- NDJSON conversion failures → error is logged, script continues to end (no upload).
+- S3 upload failures → error is logged, script exits normally.
 
-- **Instance:** EC2 Amazon Linux
-- **Name:** Soundscape MetaData Generation
-- **ID**: `i-04e435bf75cbe76bb`
-- **Type**: c6g.2xlarge
+### Missed days
 
+There is no retry mechanism. If the cron job fails for a given day, that day is permanently missed unless manually re-run:
 
-
-## Fix: Hardcoded `pbp` Path in Script
- 
-Cron runs with a minimal PATH and couldn't find the `pbp` binary. Changed the `cmd` list in `daily_metadata.py` from:
-```python
-cmd = ["pbp", "meta-gen", ...]
+```bash
+cd /home/ec2-user/mbari_open_soundscape_query
+daily-metadata --date 2026-05-13
 ```
- 
-To the full path:
-```python
-cmd = ["/home/ec2-user/mbari_open_soundscape_query/venv/bin/pbp", "meta-gen", ...]
-```
- 
- ## Cron Setup
 
-Added the cron job via `crontab -e`:
-```
-0 16 * * * cd /home/ec2-user/mbari_open_soundscape_query/daily_metadata && /home/ec2-user/mbari_open_soundscape_query/venv/bin/python daily_metadata.py >> /home/ec2-user/mbari_open_soundscape_query/logs/daily_metadata.log 2>&1
-```
-Runs daily_metadata.py every day at 8am PST (4pm UTC).  
+The next day's cron job will process "yesterday" (the day after the failed one), so failures create gaps but don't cascade.
 
+## EC2 Deployment
+
+This script runs on EC2 via a daily cron job. See [`aws.md`](aws.md) for instance details, cron schedule, and operational reference.
+
+> **EC2 note:** The `pbp` binary must be referenced with its full path on the instance: `/home/ec2-user/mbari_open_soundscape_query/venv/bin/pbp`. The script calls `pbp` without a full path, which fails on EC2 due to a minimal cron PATH. See [`aws.md`](aws.md) for the fix.
